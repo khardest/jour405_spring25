@@ -9,7 +9,7 @@ In this assignment, we will be working with a dataset reporting the number of cr
 You will need to load the tidyverse library
 
 ```{r}
-
+library(tidyverse)
 ```
 
 Then you'll load the data from the web. The URL for the data is: https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/pg_crime_totals_2024.csv. You will create a dataframe called `pg_crime` that contains the data from this URL.
@@ -17,19 +17,26 @@ Then you'll load the data from the web. The URL for the data is: https://raw.git
 ### Task 2: Load the Data and Describe It
 
 ```{r}
+pg_crime <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/pg_crime_totals_2024.csv")
 ```
 ### Task 3: Describe the Data
 
 You should examine that dataframe carefully by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the categories of incidents. From a reporting standpoint, are any of the categories more important than others? Why or why not? Do any of them make the job of summarizing the data more difficult? Why or why not?
 
-ANSWER HERE
+
+
+The categories of incidents fall into 7 main categories: accident, assault, auto, b&e, homicide, robbery, sex offense and theft. From a reporting standpoint, I would consider the most important categories to be homicide, because murders are one of the most extreme crimes, assault shootings, because guns which are one of the most dangerous weapons are involved, and robbery residential because that involves people entering citizens homes. I consider these most important because as a citizen these would be the crimes I would be the most scared to be a victim of and ones that get a lot of news attention because they are rare. One category I think would be hard to summarize is "Assault Weapon" because the title isn't very specific, so it would be hard to express this trend in a story because a lot of different weapons could've been involved.  
+One thing I did notice is that the ROBBERY RESIDENTIAL category has N/A values, meanning that none of the mutate commands I use do not apply to this column. This means there is a full category of percent changes, averages, etc that I cannot analyze due to this error. After doing some research, I think the way to fix this is to use the na. rm command which should ignore the missing values during calculations and essentially treat them as 0s. 
+
 
 ### Task 4: Calculating Averages
 
 Calculate the total number of incidents per month for each category using `mutate()`, calling the new column `total_incidents`. Then calculate the average number of incidents per month for each category of crime, calling the new column `average_incidents`. Assign the result to a new dataframe called `pg_crime_averages`.
 
 ```{r}
+pg_crime_averages <- pg_crime |> mutate(total_incidents = Jan + Feb + Mar + Apr + May + Jun + Jul + Aug + Sep + Oct + Nov + Dec)
 
+pg_crime_averages <- pg_crime_averages |> mutate(average_incidents = (Jan + Feb + Mar + Apr + May + Jun + Jul + Aug + Sep + Oct + Nov + Dec)/ 12)
 ```
 
 ### Task 5: Describe the Averages
@@ -38,12 +45,22 @@ Examine the new dataframe, `pg_crime_averages`, by clicking on it in the Environ
 
 ANSWER HERE
 
+The categories who have the highest average number of incidents per month include ACCIDENTS with 481.3 per month, ACCIDENT WITH IMPOUND with 320.75 per month, THEFT with 284.3 per month, AUTO STOLEN with 399.16 per month and THEFT FROM AUTO with 391.91 per month. This tells me that in PG county, the most common crimes involve cars, whether that be through car accidents, stealing something out of a car or stealing the car itself. 
+
+The categories with the lowest average of incidents per month include ASSAULT SHOOTING with 15.6 per month, ASSAULT WEAPON with 14.5 per month, B&E OTHER with 7.08 per month, HOMICIDE with 5.3 per month and SEX OFFENSE with 12.2 per month. This tells me that in general, humans lives are generally not at risk in PG County, as through this data it is much less common to be assaulted with a weapon or a gun, murdered or sexually assaulted. 
+
+Two categories I have a questions about are B&E OTHER  and ROBBERY OTHER as there is no indication to what OTHER means within the category.  
 
 ### Task 6: Testing a Theory
 
 One theory about crime is that it is more likely to occur in the summer months. Test this theory by creating three new columns using `mutate()` that calculate the percentage change compared to the average for each category of crime for the months of June, July, and August. Call the new columns `june_change`, `july_change`, and `august_change`. Assign the result to a new dataframe called `summer_crime_averages`.
 
 ```{r}
+summer_crime_averages <- pg_crime_averages |> mutate(
+  june_change = (Jun - average_incidents)/average_incidents *100,
+july_change = (Jul - average_incidents)/average_incidents *100,
+august_change = (Aug - average_incidents)/average_incidents *100 )
+
 ```
 
 ### Task 7: Describe the Summer Crime Averages
@@ -52,11 +69,15 @@ Look at the `summer_crime_averages` dataframe by clicking on it in the Environme
 
 ANSWER HERE
 
+One thing I noticed about the data is only AUTO STOLEN, HOMICIDE and THEFT FROM AUTO had positive percent change values in all 3 of the summer months. This means these are the only 3 categories where crimes were above average for the entire summer. Also out of the 54 percent change values represented in the 3 monthly change columns, only 25 of those values are positive/above average , meaning that there isn't a lot of evidence to show that crime in PG County increased in the summer months. 
+
 ### Task 8: What's the Story?
 
 Write up a lede and nutgraf of a story focused on the crime data in Prince George's County. It could be from any of the dataframes you've created in this assignment. The lede should be a single sentence that summarizes the most important information in the data. The nutgraf should be a paragraph that provides more context and explains why the data is important.
 
-ANSWER HERE
+Prince George's County saw a large amount of vehicle related crimes in 2024, according to crime data. 
+
+Crime categories including accidents, stolen automobiles and theft from automobiles averaged over 300 crimes per month in 2024.No other crime categories had over 100 crimes per month on average. Out of the 4790 vehicles that were stolen, only 487 were recovered.
 
 ### Task 9: Save Your Work and Put it on GitHub
 
