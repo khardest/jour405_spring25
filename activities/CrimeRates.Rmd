@@ -1,38 +1,50 @@
 ---
-title: "UMD Fees"
+title: "Crime Rates"
 ---
 
-Follow along with the demo to learn how to calculate percentage change using R and the Tidyverse. You should get started by loading the tidyverse in a new R block.
+Follow along with the demo to learn how to calculate crime rates using R and the Tidyverse. We'll also introduce a new library, janitor, which helps make column names easier to work with. You should get started by loading the tidyverse in a new R block, then install and load janitor.
 
-
-### Task 1: Load the tidyverse
-
+### Task 1: Load the tidyverse and install and load janitor
 ```{r}
 library(tidyverse)
-
+install.packages("janitor")
+library(janitor)
 ```
 
 
-### Task 2: Load the UMD Fees dataset from https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/umd_fees.csv
+
+
+### Task 2: Load the crime dataset from https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_annual_crime.csv
 ```{r}
-umd_fees <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/umd_fees.csv")
+crime <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_annual_crime.csv") |> clean_names()
 ```
 
+### Task 3: Use janitor to clean up the column names
+
+SKIP
 
 
-### Task 3: Calculate the percentage change in each category between Fall 2024 and Fall 2021 using `mutate()`
-
+### Task 4: Calculate the total crime rate for each year (picking our unit!)
 ```{r}
-umd_fees_pct <- umd_fees |> mutate(pct_change = (`Fall 2024`-`Fall 2021`)/ `Fall 2021` * 100)
+crime |> mutate(total_rate = grand_total/population * 10000)
 ```
 
 
-### Task 4: Describe our results
-
-Write a few sentences about what you found in the data. What's the story here?
 
 
-In the data, I found that the university increased most fees from 2021 to 2024. One of the fees that increased the most was student sustainability, with a 150 percent increase from 2021 to 2024. For a story, I would find out if students were aware of this change and what is actually funded through these fees. Is this money actually being given back to students through improved experiences at school or not? Were students ever actually made aware of this change or did it just show up on the bill with no notice?
+### Task 5: Calculate the violent and property crime rates for each year (same unit)
+```{r}
+crimes_with_rates <- crime |> mutate(violent_rate = violent_crime_total/population * 10000, property_rate = property_crime_total/population * 10000)
+```
+
+
+
+### Task 6: Describe our results
+
+Write a few sentences about what you found in the data. What years had the highest crime rates? What years had the lowest crime rates? Does the pattern match your expectations?
+
+I found that 1980 and 1981 had the highest property crime rates, while 2019 and 2020 had the lowest.1992 and 1993 had the highest rates in terms of violent crime, while 2020 was the lowest. In terms of 2020 having significantly lower crime in both categories, this matches my expectations because the world was literally shut down for almost the whole year, meaning crimes would just be less likely. In terms of years with the higher rates, I don't know enough about Maryland's history to know why crime was the highest then.
+
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
