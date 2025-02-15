@@ -66,3 +66,14 @@ This city, which is known as one of the most dangerous cities in the state and i
 ### Task 9: Save Your Work and Put it on GitHub
 
 Save this notebook, then commit it to your local repository. Push the changes to your GitHub repository and submit the URL for this file in ELMS.
+
+
+### Task 10: Homework 5
+```{r}
+md_cities_percentiles <- md_cities_change |> mutate(percentile = ntile(violent_rate_2020, 100))
+```
+10 cities are above the 90th percentile.
+```{r}
+md_cities_percentiles |> summarize(interquartile = IQR(violent_rate_2020))
+```
+This data does not change my previous best story idea. One reason I decided this is that only 10 cities are above the 90th percentile. While this is concerning, I still think my story about crime going down in Baltimore city is interesting. Also, the IQR was only around 4, which I do not think is that significant of a number to write a story about.  
