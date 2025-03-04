@@ -37,14 +37,15 @@ matches |> summarize(correlation = cor(fouls, goal_diff, method = "pearson"))
 ```{r}
 matches |> 
   ggplot() +
-  geom_point(aes(x=goal_diff, y=fouls))
+  geom_point(aes(x=goal_diff, y=fouls)) +
+  geom_smooth(aes(x=goal_diff, y=fouls), method = "lm")
 ```
 
 
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
-The correlation calculations indicate that the relationship is positive, but only by .018 which essentially means they are 99% not related. This means there is essentially no correlation between fouls and goal differential. The scatterplot further illustrates this to me because the dots show essentially no pattern and if I were to draw a positive line through the data, the points wouldnt hug the line at all.
+The correlation calculations indicate that the relationship is positive, but only by .018 which essentially means they are 99% not related. This means there is essentially no correlation between fouls and goal differential. The scatterplot further illustrates this to me because the dots show essentially no pattern and if I were to draw a positive line through the data, the points wouldnt hug the line at all.Instead the line of best fit is essentially just straight across the data in the plot.
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
