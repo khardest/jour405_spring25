@@ -1,0 +1,180 @@
+# JOUR405: Statistics for Journalists
+## Midterm Exam - Spring 2025
+
+Name: Keira Hardesty
+
+For this exam, you'll analyze several datasets using R and the statistical concepts we've covered in class. Load the tidyverse before beginning, then complete each task. Write your code in the provided blocks and answer the questions in complete sentences. Start by loading the tidyverse and any other libraries you think you might need.
+
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+
+## Part 1: Restaurant Health Inspections (15 points)
+
+You want to understand how restaurants in Montgomery County are performing on health inspections. The first dataset contains restaurant health inspection scores for restaurants in Montgomery County. The dataset includes the name of the establishment, the number of points for critical and non-critical areas, the total points, maximum points possible and the compliance score and grade. Load the data from: `https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/montco_inspections.csv` and complete these tasks:
+
+```{r}
+health_inspections <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/montco_inspections.csv")
+```
+
+
+### Tasks:
+1. Calculate the mean and standard deviation of compliance scores (5 points)
+```{r}
+health_inspections |> summarize(
+  mean_compliance = mean(compliance_score),
+  sd_compliance = sd(compliance_score)
+)
+```
+
+2. Create a histogram of the compliance scores with a vertical line showing the mean (5 points)
+
+```{r}
+health_inspections |> ggplot() +
+  geom_histogram(aes(x=compliance_score), binwidth=5) +
+geom_vline(aes(xintercept = mean(compliance_score)), color = "red", linetype = "dashed", size=1) 
+           
+           
+```
+
+
+3. Write 2-3 sentences interpreting what the standard deviation and histogram tell us about the distribution of compliance scores. What would be newsworthy about this distribution? What's the story here? (5 points).
+
+This distribution is skewed to the right, with a large number of the establishments having compliance scores of 100. The standard deviation is only 5.8, so we can say most of the data falls between compliance scores of from around 90 to 100. To me, the newsworthiness of this data set would come from the establishments who received the lower compliance scores. I would look into why these establishments weren't as willing to comply and if that has anything to do with their other health scores.
+
+
+## Part 2: High School Athletics (25 points)
+
+You are reporting a story about high school sports participation in Maryland and want to see if there are differences between boys and girls. The second dataset shows participation numbers in high school sports across Maryland counties in 2024, broken down by sport and sex. Load the data from: `https://raw.githubusercontent.com/example/md_hs_sports_2024.csv` and complete these tasks:
+
+```{r}
+sports_participation <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_hs_participation.csv")
+```
+
+### Tasks:
+1. Calculate the correlation between boys' and girls' participation (5 points)
+```{r}
+sports_participation |> summarize(correlation = cor(boys, girls, method = "pearson"))
+```
+
+2. Add two columns called total and girls_pct using mutate(), with the total adding together boys and girls and girls_pct being the percentage of the total represented by girls participants. (5 points)
+```{r}
+sports_participation <- sports_participation |> mutate(total= boys + girls, girls_pct= girls/total *100 )
+```
+
+3. Create a scatterplot showing this relationship, adding a line of best fit (5 points)
+```{r}
+sports_participation |> 
+  ggplot() +
+  geom_point(aes(x=girls, y=boys)) +
+  geom_smooth(aes(x=girls, y=boys), method = "lm") +
+labs(title="Girls vs Boys Participation in Sports")
+```
+
+4. In 2-3 sentences, explain what the correlation coefficient and scatterplot reveal about equity in Maryland high school sports participation. How do you interpret the school districts that are below the line vs those that are above? Which school districts are most worth examining further, and why? (10 points)
+
+The correlation coefficient is .98, indicating that the participation between boys and girls in sports has a strong positive correlation. You can also see this in the scatter plot as every point is pretty much hugging the line of best fit. Those that fall below the line have more girls participating in sports than boys and those above the line have more boys participation in sports than girls. I think Baltimore County Public Schools should be examined further as the girls participation percentage is over 70% which is much higher than any other district (curious to find out why). I would also look into the districts with low girl participation, like Somerset and Charles County to see if there is any sort of sexism or lower opportunities for girls to play sports.
+
+## Part 3: Public Transit Ridership (20 points)
+
+You are investigating public transit ridership in the Washington, D.C. area and want to understand the patterns of daily bus and rail ridership. The third dataset contains daily bus and rail ridership totals from WMATA for the past year. Load the data from https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/wmata_daily.csv and do the following:
+```{r}
+dc_ridership <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/wmata_daily.csv")
+```
+
+
+### Tasks:
+1. Calculate the average bus and rail ridership and standard deviation using summarize() (5 points)
+```{r}
+dc_ridership |> summarize(
+  bus_mean = mean(bus),
+  bus_sd = sd(bus),
+  rail_mean = mean(rail),
+  rail_sd = sd(rail)
+)
+
+
+```
+
+2. Using the process you used in class, take a random sample daily ridership numbers and calculate the sample means and deviations for bus and rail. The number in the sample is up to you, but explain why you chose what you did. Compare this to the stats you generated in step 1. (5 points)
+
+```{r}
+sample50 <- dc_ridership |> sample_n(50)
+
+sample50 |> summarize(bus_mean= mean(bus), bus_sd= sd(bus), rail_mean= mean(rail), rail_sd= sd(rail))
+```
+I chose to do a sample of 50 because I remember for the last homework about sampling, when sampling around 10% of the data, the values were pretty accurate. 50 is a little bit more than 10% of the total population, so I thought it would be an appropriate sample size. When I compare the means and sds from the population and the sample, I found them tp be pretty similar, witch the values only being a few thousand off from each other. I think in general while the values are different, they are close enough that the sample and the population convey similar points.
+
+3. Using group_by() and summarize(), calculate the means for bus and rail ridership for each weekday. Describe the overall pattern of ridership for bus and rail - which days stand out and why? Are there differences between bus and rail in the standard deviation values? (10 points)
+
+
+```{r}
+weekday_riders <- dc_ridership |> group_by(weekday) |> summarize(bus_mean= mean(bus), bus_sd= sd(bus), rail_mean= mean(rail), rail_sd= sd(rail))
+
+```
+
+For bus, it seems as if people take the bus mostly during the week based on the means, as the order from most to least riders is Thu, Tue, Wed, Fri, Mon, Sat, Sun. For rail it is a similar pattern with people riding mostly during the week, with the order being Tue, Wed, Thu, Fri, Mon, Sat, Sun. To me, the days that stand out the most are Tuesday (because it has one of the highest riderships for both modes of transportation), and Sunday (because it has the last amount of riders for both modes of transportation). In general, rail has higher standard deviations on each day of the week compared to buses. 
+
+
+## Part 4: Maryland Car Theft Rates (20 points)
+
+Your editor has assigned you a story about car thefts in Maryland and wants you to analyze the data to find out which counties have the highest rates. The fourth dataset contains car theft statistics for Maryland counties in 2023 and population. Load the data from: `https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_car_thefts.csv` and complete the following tasks:
+```{r}
+md_car_thefts <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/md_car_thefts.csv")
+```
+
+
+### Tasks:
+1. Using mutate, add a column that calculates the rate of car thefts for each county - you need to choose the per capita rate (5 points)
+```{r}
+md_car_thefts <- md_car_thefts |> mutate(county_rate= `2023`/population * 10000)
+```
+
+2. Calculate the median car theft rate and the total number of car thefts statewide. Which counties have rates above the median, and what percentage of all car thefts occur in those counties? (5 points)
+```{r}
+md_car_thefts |> summarize(median_rate= median(county_rate), total_thefts= sum(`2023`) )
+```
+Cities above mean and % of total:
+Baltimore City- 29%
+PG County- 35%
+St Mary's- .4%
+Baltimore County- 10%
+Dorchester County-.3%
+Montgomery County-9%
+Howard County-2.9%
+Anne Arundel- 4.5%
+Washington-1%
+Charles-1.1%
+Cecil-.6%
+Wicomico- .4%
+
+
+3. Write 2-3 sentences describing what these calculations reveal about the distribution of car thefts in Maryland. What's the lede of a story about your findings? (10 points)
+
+These calculations reveal that a few counties make up a very large number of car thefts for the state and just because one county has a rate higher than the median, doesnt mean the car thefts in that county are a lot compared to the state total. A lede for a story could be "Car thefts in Baltimore City and Prince Georges COunty represent over 60% of all Maryland car thefts in 2023."
+
+
+## Part 5: Data Analysis Scenario (20 points)
+
+You receive a tip that local emergency response times have gotten significantly worse over the past year. You obtain monthly data on response times for police, fire and ambulance calls.
+
+Write 3-4 sentences (no code!) explaining:
+1. What statistical measures would you calculate to verify this claim? (10 points)
+I would compare the means and standard deviations of response times for police, fire and ambulance to see how they compare. Additionally, I would group response times by categories such as the time of the call and type of emergency to see if that played a role in the response times. I would also see if there was a correlation between the month of the year and the average response time to see if the month really did play a role in how fast they responded. 
+2. What visualizations would help readers understand the trends? (5 points)
+
+I think a scatterplot that compared month of the year to the response time would be a great way to show readers if these two things were correlated. It would let readers see if response times really were longer later in the year. I also think a histogram showing the distributions of response times could be helpful as you could see how dramatic the difference in response times are. 
+
+3. What additional context or data would you need to make this a complete story? (5 points)
+Certain context/data I would need is the types of emergencies(to see if maybe a majority of emergencies later in the year werent as drastic aka heart attack vs a cat stuck in a tree). I would also want to know if there were any changes in employees or management that would've impacted how these organizations operate. 
+
+
+### Submission Instructions
+- Save your work frequently
+- Make sure all code blocks run without errors
+- Provide clear explanations for your analytical choices
+- Before submitting, clear your environment and run the entire notebook
+
+Good luck!

@@ -1,0 +1,97 @@
+---
+title: "MidtermNotes"
+output: html_document
+---
+
+### Homework 1
+# load tidyverse
+```{r}
+library(tidyverse)
+```
+# make a dataframe
+```{r}
+students <- read_csv("link")
+```
+
+### Homework 2
+# calculating average
+```{r}
+pg_crime_averages <- pg_crime |> mutate(total_incidents = Jan + Feb + Mar + Apr + May + Jun + Jul + Aug + Sep + Oct + Nov + Dec)
+
+pg_crime_averages <- pg_crime_averages |> mutate(average_incidents = (Jan + Feb + Mar + Apr + May + Jun + Jul + Aug + Sep + Oct + Nov + Dec)/ 12)
+```
+# calculating percent change
+```{r}
+summer_crime_averages <- pg_crime_averages |> mutate(
+  june_change = (Jun - average_incidents)/average_incidents *100,
+july_change = (Jul - average_incidents)/average_incidents *100,
+august_change = (Aug - average_incidents)/average_incidents *100 )
+```
+### Homework 3
+# mean, median, minimum, maximum
+```{r}
+wh_salaries |> summarize(
+    mean_value = mean(salary),
+    median_value = median(salary),
+     min_value = min(salary),
+    max_value = max(salary)
+  )
+```
+### Homework 4
+# load the janitor library
+```{r}
+library(janitor)
+```
+#calculating rates
+```{r}
+md_cities_rates <- md_cities |> mutate(violent_rate_2019 = violent2019/pop2019 * 1000, property_rate_2019 = property2019/pop2019 *1000, violent_rate_2020 = violent2020/pop2020 * 1000, property_rate_2020 = property2020/pop2020 *1000)
+```
+### Homework 5
+#percentile
+```{r}
+md_cities_percentiles <- md_cities_change |> mutate(percentile = ntile(violent_rate_2020, 100))
+```
+#IQR
+```{r}
+md_cities_percentiles |> summarize(interquartile = IQR(violent_rate_2020)) 
+```
+### Homework 6
+#mean and standard deviation
+```{r}
+spotify_songs |> summarize(mean = mean(danceability), sd = sd(danceability) )
+```
+# histogram
+```{r}
+spotify_songs |> 
+   ggplot() +
+  geom_histogram(aes(x=danceability), binwidth = .1) +
+  geom_vline(aes(xintercept = mean(danceability)), color = "red", linetype = "dashed" , size=1) +
+  geom_vline(aes(xintercept = mean(danceability) - sd(danceability)), color = "blue", linetype = "dashed" , size=1) +
+  geom_vline(aes(xintercept = mean(danceability) + sd(danceability)), color = "blue", linetype = "dashed" , size=1)
+```
+### Homework 7
+#sampling
+```{r}
+sample5 <- candy |> sample_n(5)
+
+sample10 <- candy |> sample_n(10)
+
+sample5 |> summarize(mean = mean(red), sd = sd(red))
+
+sample10 |> summarize(mean = mean(red), sd = sd(red))
+```
+### Homework 8
+# correlation coefficient
+```{r}
+gdp_data |> summarize(correlation = cor(GDP, DJIA, method = "pearson"))
+```
+# scatterplot
+```{r}
+gdp_data |> 
+  ggplot() +
+  geom_point(aes(x=DJIA, y=GDP)) +
+  geom_smooth(aes(x=DJIA, y=GDP), method = "lm") +
+  ggtitle("GDP vs DJIA Per Quarter")
+```
+
+you can also use labs(title = )
