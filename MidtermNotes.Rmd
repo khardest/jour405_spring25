@@ -94,4 +94,4 @@ gdp_data |>
   ggtitle("GDP vs DJIA Per Quarter")
 ```
 
-you can also use labs(title = )
+you can also use labs(title = t)
