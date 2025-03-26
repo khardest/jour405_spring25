@@ -192,4 +192,4 @@ What metrics or outcomes beyond test scores might be important to track for asse
 
 One metric that may be good to measure is how long teachers are spending each day on teaching reading. It could be that pure teaching time increased these scores instead of the new program. 
 
-It also might be important to measure the difficulty level students are reading at and if it is above, below or on grade level and if this varies between students.
+It also might be important to measure the difficulty level students are reading at and if it is above, below or on grade level and if this varies between students.a
