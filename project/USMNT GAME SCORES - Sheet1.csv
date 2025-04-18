@@ -1,0 +1,794 @@
+M,Opponent,Date,Result,Event
+1,Sweden,"August 20, 1916",3–2,Friendly
+2,Norway,"September 3, 1916",1–1,Friendly
+3,Estonia,"May 25, 1924",1–0,1924 Summer Olympics R32
+4,Uruguay,"May 29, 1924",0–3,1924 Summer Olympics R16
+5,Poland,"June 10, 1924",3–2,Friendly
+6,Irish Free State,"June 16, 1924",1–3,Friendly
+7,Canada,"June 27, 1925",0–1,Friendly
+8,Canada,"November 8, 1925",6–1,Friendly
+9,Canada,"November 6, 1926",6–2,Friendly
+10,Argentina,"May 29, 1928",2–11,1928 Summer Olympics R16
+11,Poland,"June 10, 1928",3–3,Friendly
+12,Belgium,"July 13, 1930",3–0,World Cup GS
+13,Paraguay,"July 17, 1930",3–0,World Cup GS
+14,Argentina,"July 26, 1930",1–6,World Cup SF
+15,Brazil,"August 17, 1930",3–4,Friendly
+16,Mexico,"May 24, 1934",4–2,World Cup Q
+17,Italy,"May 27, 1934",1–7,World Cup 1R
+18,Italy,"August 3, 1936",0–1,1936 Summer Olympics 1R
+19,Mexico,"September 12, 1937",2–7,Friendly
+20,Mexico,"September 19, 1937",3–7,Friendly
+21,Mexico,"September 26, 1937",1–5,Friendly
+22,Mexico,"July 13, 1947",0–5,North American Championship
+23,Cuba,"July 20, 1947",2–5,North American Championship
+24,Norway,"August 6, 1948",0–11,Friendly
+25,Northern Ireland,"August 11, 1948",0–5,Friendly
+26,Israel,"September 26, 1948",3–1,Friendly
+27,Mexico,"September 4, 1949",0–6,"North American Championship
+World Cup Q"
+28,Cuba,"September 14, 1949",1–1,"North American Championship
+World Cup Q"
+29,Mexico,"September 18, 1949",2–6,"North American Championship
+World Cup Q"
+30,Cuba,"September 21, 1949",5–2,"North American Championship
+World Cup Q"
+31,Spain,"June 25, 1950",1–3,World Cup GS
+32,England,"June 29, 1950",1–0,World Cup GS
+33,Chile,"July 2, 1950",2–5,World Cup GS
+34,Scotland,"April 30, 1952",0–5,Friendly
+35,Italy,"July 16, 1952",0–8,1952 Summer Olympics
+36,England,"June 8, 1953",3–6,Friendly
+37,Mexico,"January 10, 1954",0–4,World Cup Q
+38,Mexico,"January 14, 1954",1–3,World Cup Q
+39,Haiti,"March 3, 1954",3–2,World Cup Q
+40,Haiti,"March 4, 1954",3–0,World Cup Q
+41,Iceland,"August 25, 1955",2–3,Friendly
+42,Yugoslavia,"November 28, 1956",0–8,1956 Summer Olympics
+43,Mexico,"April 7, 1957",0–6,World Cup Q
+44,Mexico,"April 28, 1957",2–7,World Cup Q
+45,Canada,"June 22, 1957",1–5,World Cup Q
+46,Canada,"July 6, 1957",2–3,World Cup Q
+47,England,"May 28, 1959",1–8,Friendly
+48,Mexico,"November 6, 1960",3–3,World Cup Q
+49,Mexico,"November 13, 1960",0–3,World Cup Q
+50,Colombia,"February 5, 1961",0–2,Friendly
+51,England,"May 27, 1964",0–10,Friendly
+52,Mexico,"March 7, 1965",2–2,World Cup Q
+53,Mexico,"March 12, 1965",0–2,World Cup Q
+54,Honduras,"March 17, 1965",1–0,World Cup Q
+55,Honduras,"March 21, 1965",1–1,World Cup Q
+56,Israel,"September 15, 1968",3–3,Friendly
+57,Israel,"September 25, 1968",0–4,Friendly
+58,Canada,"October 13, 1968",2–4,World Cup Q
+59,Haiti,"October 20, 1968",6–3,Friendly
+60,Haiti,"October 21, 1968",2–5,Friendly
+61,Haiti,"October 23, 1968",0–1,Friendly
+62,Canada,"October 26, 1968",1–0,World Cup Q
+63,Bermuda,"November 3, 1968",6–2,World Cup Q
+64,Bermuda,"November 11, 1968",2–0,World Cup Q
+65,Haiti,"April 20, 1969",0–2,World Cup Q
+66,Haiti,"May 11, 1969",0–1,World Cup Q
+67,Canada,"August 20, 1972",2–3,CONCACAF Champ. Q/World Cup Q
+68,Canada,"August 29, 1972",2–2,CONCACAF Champ. Q/World Cup Q
+69,Mexico,"September 3, 1972",1–3,CONCACAF Champ. Q/World Cup Q
+70,Mexico,"September 10, 1972",1–2,CONCACAF Champ. Q/World Cup Q
+71,Bermuda,"March 17, 1973",0–4,Friendly
+72,Poland,"March 20, 1973",0–4,Friendly
+73,Poland,"August 3, 1973",0–1,Friendly
+74,Canada,"August 5, 1973",2–0,Friendly
+75,Poland,"August 10, 1973",0–4,Friendly
+76,Poland,"August 12, 1973",1–0,Friendly
+77,Bermuda,"September 9, 1973",1–0,Friendly
+78,Mexico,"October 16, 1973",0–2,Friendly
+79,Haiti,"November 3, 1973",0–1,Friendly
+80,Haiti,"November 5, 1973",0–1,Friendly
+81,Israel,"November 13, 1973",1–3,Friendly
+82,Israel,"November 15, 1973",0–2,Friendly
+83,Mexico,"September 5, 1974",1–3,Friendly
+84,Mexico,"September 8, 1974",0–1,Friendly
+85,Poland,"March 26, 1975",0–7,Friendly
+86,Poland,"June 24, 1975",0–4,Friendly
+87,Costa Rica,"August 19, 1975",1–3,Mexico City Tournament
+88,Argentina,"August 21, 1975",0–6,Mexico City Tournament
+89,Mexico,"August 24, 1975",0–2,Mexico City Tournament
+90,Canada,"September 24, 1976",1–1,CONCACAF Champ. Q/World Cup Q
+91,Mexico,"October 3, 1976",0–0,CONCACAF Champ. Q/World Cup Q
+92,Mexico,"October 15, 1976",0–3,CONCACAF Champ. Q/World Cup Q
+93,Canada,"October 20, 1976",2–0,CONCACAF Champ. Q/World Cup Q
+94,Haiti,"November 10, 1976",0–0,Friendly
+95,Haiti,"November 12, 1976",0–0,Friendly
+96,Haiti,"November 14, 1976",0–0,Friendly
+97,Canada,"December 22, 1976",0–3,CONCACAF Champ. Q/World Cup Q
+98,El Salvador,"September 15, 1977",2–1,Friendly
+99,Guatemala,"September 18, 1977",1–3,Friendly
+100,Guatemala,"September 25, 1977",0–2,Friendly
+101,Mexico,"September 27, 1977",0–3,Friendly
+102,El Salvador,"September 30, 1977",0–0,Friendly
+103,China,"October 6, 1977",1–1,Friendly
+104,China,"October 10, 1977",1–0,Friendly
+105,China,"October 16, 1977",2–1,Friendly
+106,Iceland,"September 3, 1978",0–0,Friendly
+107,Switzerland,"September 6, 1978",0–2,Friendly
+108,Portugal,"September 20, 1978",0–1,Friendly
+109,Soviet Union,"February 3, 1979",1–3,Friendly
+110,Soviet Union,"February 11, 1979",1–4,Friendly
+111,France,"May 2, 1979",0–5,Friendly
+112,Bermuda,"July 10, 1979",3–1,Friendly
+113,France,"October 10, 1979",0–3,Friendly
+114,Hungary,"October 26, 1979",2–0,Friendly
+115,Republic of Ireland,"October 29, 1979",2–3,Friendly
+116,Luxembourg,"October 4, 1980",2–0,Friendly
+117,Portugal,"October 7, 1980",1–1,Friendly
+118,Canada,"October 25, 1980",0–0,CONCACAF Champ. Q/World Cup Q
+119,Canada,"November 1, 1980",1–2,CONCACAF Champ. Q/World Cup Q
+120,Mexico,"November 9, 1980",1–5,CONCACAF Champ. Q/World Cup Q
+121,Mexico,"November 23, 1980",2–1,CONCACAF Champ. Q/World Cup Q
+122,Trinidad and Tobago,"March 21, 1982",2–1,Friendly
+123,Haiti,"April 8, 1983",2–0,Friendly
+124,Italy,"May 30, 1984",0–0,Friendly
+125,Netherlands Antilles,"September 29, 1984",0–0,CONCACAF Champ. Q/World Cup Q
+126,Netherlands Antilles,"October 6, 1984",4–0,CONCACAF Champ. Q/World Cup Q
+127,El Salvador,"October 9, 1984",3–1,Friendly
+128,Colombia,"October 11, 1984",1–0,Friendly
+129,Guatemala,"October 14, 1984",0–4,Friendly
+130,Mexico,"October 17, 1984",1–2,Friendly
+131,Ecuador,"November 30, 1984",0–0,Friendly
+132,Ecuador,"December 2, 1984",2–2,Friendly
+133,Switzerland,"February 8, 1985",1–1,Friendly
+134,Canada,"April 2, 1985",0–2,Friendly
+135,Canada,"April 4, 1985",1–1,Friendly
+136,Trinidad and Tobago,"May 14, 1985",2–1,CONCACAF Champ./World Cup Q
+137,Trinidad and Tobago,"May 19, 1985",1–0,CONCACAF Champ./World Cup Q
+138,Costa Rica,"May 26, 1985",1–1,CONCACAF Champ./World Cup Q
+139,Costa Rica,"May 31, 1985",0–1,CONCACAF Champ./World Cup Q
+140,England,"June 16, 1985",0–5,Friendly
+141,Canada,"February 5, 1986",0–0,Miami Cup
+142,Uruguay,"February 7, 1986",1–1,Miami Cup
+143,Egypt,"June 8, 1987",1–3,President's Cup
+144,South Korea,"June 12, 1987",0–1,President's Cup
+145,Thailand,"June 16, 1987",1–0,President's Cup
+146,Guatemala,"January 10, 1988",0–1,Friendly
+147,Guatemala,"January 13, 1988",1–0,Friendly
+148,Colombia,"May 14, 1988",0–2,Friendly
+149,Chile,"June 1, 1988",1–1,Friendly
+150,Chile,"June 3, 1988",1–3,Friendly
+151,Chile,"June 5, 1988",0–3,Friendly
+152,Ecuador,"June 7, 1988",0–1,Friendly
+153,Ecuador,"June 10, 1988",0–2,Friendly
+154,Ecuador,"June 12, 1988",0–0,Friendly
+155,Costa Rica,"June 14, 1988",1–0,Friendly
+156,Poland,"July 13, 1988",0–2,Friendly
+157,Jamaica,"July 24, 1988",0–0,CONCACAF Champ. Q/World Cup Q
+158,Jamaica,"August 13, 1988",5–1,CONCACAF Champ. Q/World Cup Q
+159,Costa Rica,"April 16, 1989",0–1,CONCACAF Champ./World Cup Q
+160,Costa Rica,"April 30, 1989",1–0,CONCACAF Champ./World Cup Q
+161,Trinidad and Tobago,"May 13, 1989",1–1,CONCACAF Champ./World Cup Q
+162,Peru,"June 4, 1989",3–0,Friendly
+163,Guatemala,"June 17, 1989",2–1,CONCACAF Champ./World Cup Q
+164,Colombia,"June 24, 1989",0–1,Friendly
+165,South Korea,"August 13, 1989",1–2,Friendly
+166,El Salvador,"September 17, 1989",1–0,CONCACAF Champ./World Cup Q
+167,Guatemala,"October 8, 1989",0–0,CONCACAF Champ./World Cup Q
+168,El Salvador,"November 5, 1989",0–0,CONCACAF Champ./World Cup Q
+169,Bermuda,"November 14, 1989",2–1,Friendly
+170,Trinidad and Tobago,"November 19, 1989",1–0,CONCACAF Champ./World Cup Q
+171,Costa Rica,"February 2, 1990",0–2,Miami Cup
+172,Colombia,"February 4, 1990",1–1,Miami Cup
+173,Bermuda,"February 13, 1990",1–0,Friendly
+174,Soviet Union,"February 24, 1990",1–3,Friendly
+175,Finland,"March 10, 1990",2–1,Friendly
+176,Hungary,"March 20, 1990",0–2,Friendly
+177,East Germany,"March 28, 1990",2–3,Friendly
+178,Iceland,"April 8, 1990",4–1,Friendly
+179,Colombia,"April 22, 1990",0–1,Friendly
+180,Malta,"May 5, 1990",1–0,Friendly
+181,Poland,"May 9, 1990",3–1,Friendly
+182,Liechtenstein,"May 30, 1990",4–1,Friendly
+183,Switzerland,"June 2, 1990",1–2,Friendly
+184,Czechoslovakia,"June 10, 1990",1–5,World Cup GS
+185,Italy,"June 14, 1990",0–1,World Cup GS
+186,Austria,"June 19, 1990",1–2,World Cup GS
+187,East Germany,"July 28, 1990",1–2,Friendly
+188,Trinidad and Tobago,"September 15, 1990",3–0,Friendly
+189,Poland,"October 10, 1990",3–2,Friendly
+190,Croatia,"October 17, 1990",1–2,Friendly
+191,Trinidad and Tobago,"November 18, 1990",0–0,Trinidad Tournament
+192,Soviet Union,"November 21, 1990",0–0,Trinidad Tournament
+193,Portugal,"December 19, 1990",0–1,Friendly
+194,Switzerland,"February 1, 1991",0–1,Miami Cup
+195,Bermuda,"February 21, 1991",0–1,Friendly
+196,Mexico,"March 12, 1991",2–2,North American Nations Cup
+197,Canada,"March 16, 1991",2–0,North American Nations Cup
+198,Uruguay,"May 5, 1991",1–0,Friendly
+199,Argentina,"May 19, 1991",0–1,Friendly
+200,Republic of Ireland,"June 1, 1991",1–1,Friendly
+201,Trinidad and Tobago,"June 29, 1991",2–1,Gold Cup GS
+202,Guatemala,"July 1, 1991",3–0,Gold Cup GS
+203,Costa Rica,"July 3, 1991",3–2,Gold Cup GS
+204,Mexico,"July 5, 1991",2–0,Gold Cup SF
+205,Honduras,"July 7, 1991",0(4)–0(3),Gold Cup F
+206,Romania,"August 28, 1991",2–0,Friendly
+207,Turkey,"September 4, 1991",1–1,Friendly
+208,Jamaica,"September 14, 1991",1–0,Friendly
+209,North Korea,"October 19, 1991",1–2,Friendly
+210,Costa Rica,"November 24, 1991",1–1,Friendly
+211,CIS,"January 25, 1992",0–1,Friendly
+212,CIS,"February 2, 1992",2–1,Friendly
+213,Costa Rica,"February 12, 1992",0–0,Friendly
+214,El Salvador,"February 19, 1992",0–2,Friendly
+215,Brazil,"February 26, 1992",0–3,Friendly
+216,Spain,"March 11, 1992",0–2,Friendly
+217,Morocco,"March 18, 1992",1–3,Friendly
+218,China,"April 4, 1992",5–0,Friendly
+219,Republic of Ireland,"April 29, 1992",1–4,Friendly
+220,Scotland,"May 17, 1992",0–1,Friendly
+221,Republic of Ireland,"May 30, 1992",3–1,U.S. Cup
+222,Portugal,"June 3, 1992",1–0,U.S. Cup
+223,Italy,"June 6, 1992",1–1,U.S. Cup
+224,Australia,"June 13, 1992",0–1,Friendly
+225,Ukraine,"June 27, 1992",0–0,Friendly
+226,Colombia,"July 31, 1992",0–1,Friendship Cup
+227,Brazil,"August 2, 1992",0–1,Friendship Cup
+228,Canada,"September 3, 1992",2–0,Friendly
+229,Canada,"October 9, 1992",0–0,Friendly
+230,Saudi Arabia,"October 15, 1992",0–3,Confederations Cup SF
+231,Ivory Coast,"October 19, 1992",5–2,Confederations Cup 3PG
+232,Denmark,"January 30, 1993",2–2,Friendly
+233,Romania,"February 6, 1993",1–1,Friendly
+234,Russia,"February 13, 1993",0–1,Friendly
+235,Russia,"February 21, 1993",0–0,Friendly
+236,Canada,"March 3, 1993",2–2,Friendly
+237,Hungary,"March 10, 1993",0–0,Kirin Cup
+238,Japan,"March 14, 1993",1–3,Kirin Cup
+239,El Salvador,"March 23, 1993",2–2,Friendly
+240,Honduras,"March 25, 1993",1–4,Friendly
+241,Saudi Arabia,"April 9, 1993",2–0,Friendly
+242,Iceland,"April 17, 1993",1–1,Friendly
+243,Colombia,"May 8, 1993",1–2,Friendly
+244,Bolivia,"May 23, 1993",0–0,Friendly
+245,Peru,"May 26, 1993",0–0,Friendly
+246,Brazil,"June 6, 1993",0–2,U.S. Cup
+247,England,"June 9, 1993",2–0,U.S. Cup
+248,Germany,"June 13, 1993",3–4,U.S. Cup
+249,Uruguay,"June 16, 1993",0–1,Copa América GS
+250,Ecuador,"June 19, 1993",0–2,Copa América GS
+251,Venezuela,"June 22, 1993",3–3,Copa América GS
+252,Jamaica,"July 10, 1993",1–0,Gold Cup GS
+253,Panama,"July 14, 1993",2–1,Gold Cup GS
+254,Honduras,"July 17, 1993",1–0,Gold Cup GS
+255,Costa Rica,"July 21, 1993",1–0,Gold Cup SF
+256,Mexico,"July 25, 1993",0–4,Gold Cup F
+257,Iceland,"August 31, 1993",1–0,Friendly
+258,Norway,"September 8, 1993",0–1,Friendly
+259,Mexico,"October 13, 1993",1–1,Friendly
+260,Ukraine,"October 16, 1993",1–2,Friendly
+261,Ukraine,"October 23, 1993",0–1,Friendly
+262,Jamaica,"November 7, 1993",1–0,Friendly
+263,Cayman Islands,"November 14, 1993",8–1,Friendly
+264,El Salvador,"December 5, 1993",7–0,Friendly
+265,Germany,"December 18, 1993",0–3,Friendly
+266,Norway,"January 15, 1994",2–1,Friendly
+267,Switzerland,"January 22, 1994",1–1,Friendly
+268,Russia,"January 29, 1994",1–1,Friendly
+269,Denmark,"February 10, 1994",0(2)–0(4),Carlsberg Cup SF
+270,Romania,"February 13, 1994",1–2,Carlsberg Cup 3PG
+271,Bolivia,"February 18, 1994",1–1,Joe Robbie Cup
+272,Sweden,"February 20, 1994",1–3,Joe Robbie Cup
+273,South Korea,"March 12, 1994",1–1,Friendly
+274,Bolivia,"March 26, 1994",2–2,Friendly
+275,Moldova,"April 16, 1994",1–1,Friendly
+276,Moldova,"April 20, 1994",3–0,Friendly
+277,Iceland,"April 24, 1994",1–2,Friendly
+278,Chile,"April 30, 1994",0–2,Friendly
+279,Estonia,"May 7, 1994",4–0,Friendly
+280,Armenia,"May 15, 1994",1–0,Friendly
+281,Saudi Arabia,"May 25, 1994",0–0,Friendly
+282,Greece,"May 28, 1994",1–1,Friendly
+283,Mexico,"June 4, 1994",1–0,Friendly
+284,Switzerland,"June 18, 1994",1–1,World Cup GS
+285,Colombia,"June 22, 1994",2–1,World Cup GS
+286,Romania,"June 26, 1994",0–1,World Cup GS
+287,Brazil,"July 4, 1994",0–1,World Cup R16
+288,England,"September 7, 1994",0–2,Friendly
+289,Saudi Arabia,"October 19, 1994",1–2,Friendly
+290,Trinidad and Tobago,"November 19, 1994",0–1,Friendly
+291,Jamaica,"November 22, 1994",3–0,Friendly
+292,Honduras,"December 11, 1994",1–1,Friendly
+293,Uruguay,"March 25, 1995",2–2,Friendly
+294,Belgium,"April 22, 1995",0–1,Friendly
+295,Costa Rica,"May 28, 1995",1–2,Friendly
+296,Nigeria,"June 11, 1995",3–2,U.S. Cup
+297,Mexico,"June 18, 1995",4–0,U.S. Cup
+298,Colombia,"June 25, 1995",0–0,U.S. Cup
+299,Chile,"July 8, 1995",2–1,Copa América GS
+300,Bolivia,"July 11, 1995",0–1,Copa América GS
+301,Argentina,"July 14, 1995",3–0,Copa América GS
+302,Mexico,"July 17, 1995",0(4)–0(1),Copa América QF
+303,Brazil,"July 20, 1995",0–1,Copa América SF
+304,Colombia,"July 22, 1995",1–4,Copa América 3PG
+305,Sweden,"August 16, 1995",0–1,Friendly
+306,Saudi Arabia,"October 8, 1995",4–3,Friendly
+307,Trinidad and Tobago,"January 13, 1996",3–2,Gold Cup GS
+308,El Salvador,"January 16, 1996",2–0,Gold Cup GS
+309,Brazil,"January 18, 1996",0–1,Gold Cup SF
+310,Guatemala,"January 21, 1996",3–0,Gold Cup 3PG
+311,Scotland,"May 26, 1996",2–1,Friendly
+312,Republic of Ireland,"June 9, 1996",2–1,U.S. Cup
+313,Bolivia,"June 12, 1996",0–2,U.S. Cup
+314,Mexico,"June 16, 1996",2–2,U.S. Cup
+315,El Salvador,"August 30, 1996",3–1,Friendly
+316,Peru,"October 16, 1996",1–4,Friendly
+317,Guatemala,"November 3, 1996",2–0,World Cup Q
+318,Trinidad and Tobago,"November 10, 1996",2–0,World Cup Q
+319,Trinidad and Tobago,"November 24, 1996",1–0,World Cup Q
+320,Costa Rica,"December 1, 1996",1–2,World Cup Q
+321,Costa Rica,"December 14, 1996",2–1,World Cup Q
+322,Guatemala,"December 21, 1996",2–2,World Cup Q
+323,Peru,"January 17, 1997",0–1,U.S. Cup
+324,Mexico,"January 19, 1997",0–2,U.S. Cup
+325,Denmark,"January 22, 1997",1–4,U.S. Cup
+326,China,"January 29, 1997",1–2,Friendly
+327,China,"February 1, 1997",1–1,Friendly
+328,Jamaica,"March 2, 1997",0–0,World Cup Q
+329,Canada,"March 16, 1997",3–0,World Cup Q
+330,Costa Rica,"March 23, 1997",2–3,World Cup Q
+331,Mexico,"April 20, 1997",2–2,World Cup Q
+332,Paraguay,"June 4, 1997",0–0,Friendly
+333,Israel,"June 17, 1997",2–1,Friendly
+334,El Salvador,"June 29, 1997",1–1,World Cup Q
+335,Ecuador,"August 7, 1997",0–1,Friendly
+336,Costa Rica,"September 7, 1997",1–0,World Cup Q
+337,Jamaica,"October 3, 1997",1–1,World Cup Q
+338,Mexico,"November 2, 1997",0–0,World Cup Q
+339,Canada,"November 9, 1997",3–0,World Cup Q
+340,El Salvador,"November 16, 1997",4–2,World Cup Q
+341,Sweden,"January 24, 1998",1–0,Friendly
+342,Cuba,"February 1, 1998",3–0,Gold Cup GS
+343,Costa Rica,"February 7, 1998",2–1,Gold Cup GS
+344,Brazil,"February 10, 1998",1–0,Gold Cup SF
+345,Mexico,"February 15, 1998",0–1,Gold Cup F
+346,Netherlands,"February 21, 1998",0–2,Friendly
+347,Belgium,"February 25, 1998",0–2,Friendly
+348,Paraguay,"March 14, 1998",2–2,Friendly
+349,Austria,"April 22, 1998",3–0,Friendly
+350,North Macedonia,"May 16, 1998",0–0,Friendly
+351,Kuwait,"May 24, 1998",2–0,Friendly
+352,Scotland,"May 30, 1998",0–0,Friendly
+353,Germany,"June 15, 1998",0–2,World Cup GS
+354,Iran,"June 21, 1998",1–2,World Cup GS
+355,FR Yugoslavia,"June 25, 1998",0–1,World Cup GS
+356,Australia,"November 6, 1998",0–0,Friendly
+357,Bolivia,"January 24, 1999",0–0,Friendly
+358,Germany,"February 6, 1999",3–0,Friendly
+359,Chile,"February 21, 1999",2–1,Friendly
+360,Guatemala,"March 11, 1999",3–1,U.S. Cup
+361,Mexico,"March 13, 1999",1–2,U.S. Cup
+362,Argentina,"June 13, 1999",1–0,Friendly
+363,New Zealand,"July 24, 1999",2–1,Confederations Cup GS
+364,Brazil,"July 28, 1999",0–1,Confederations Cup GS
+365,Germany,"July 30, 1999",2–0,Confederations Cup GS
+366,Mexico,"August 1, 1999",0–1,Confederations Cup SF
+367,Saudi Arabia,"August 1, 1999",2–0,Confederations Cup 3PG
+368,Jamaica,"September 8, 1999",2–2,Friendly
+369,Morocco,"November 17, 1999",1–2,Friendly
+370,Iran,"January 16, 2000",1–1,Friendly
+371,Chile,"January 29, 2000",2–1,Friendly
+372,Haiti,"February 12, 2000",3–0,Gold Cup GS
+373,Peru,"February 16, 2000",1–0,Gold Cup GS
+374,Colombia,"February 19, 2000",2(1)–2(2),Gold Cup QF
+375,Tunisia,"March 12, 2000",1–1,Friendly
+376,Russia,"April 26, 2000",0–2,Friendly
+377,South Africa,"June 3, 2000",4–0,U.S. Cup
+378,Republic of Ireland,"June 6, 2000",1–1,U.S. Cup
+379,Mexico,"June 11, 2000",3–0,U.S. Cup
+380,Guatemala,"July 16, 2000",1–1,World Cup Q
+381,Costa Rica,"July 23, 2000",1–2,World Cup Q
+382,Barbados,"August 16, 2000",7–0,World Cup Q
+383,Guatemala,"September 3, 2000",1–0,World Cup Q
+384,Costa Rica,"October 11, 2000",0–0,World Cup Q
+385,Mexico,"October 25, 2000",2–0,Friendly
+386,Barbados,"November 15, 2000",4–0,World Cup Q
+387,China,"January 27, 2001",2–1,Friendly
+388,Colombia,"February 3, 2001",0–1,Friendly
+389,Mexico,"February 28, 2001",2–0,World Cup Q
+390,Brazil,"March 3, 2001",1–2,Friendly
+391,Honduras,"March 28, 2001",2–1,World Cup Q
+392,Costa Rica,"April 25, 2001",1–0,World Cup Q
+393,Ecuador,"June 7, 2001",0–0,Friendly
+394,Jamaica,"June 16, 2001",0–0,World Cup Q
+395,Trinidad and Tobago,"June 20, 2001",2–0,World Cup Q
+396,Mexico,"July 1, 2001",0–1,World Cup Q
+397,Honduras,"September 1, 2001",2–3,World Cup Q
+398,Costa Rica,"September 5, 2001",0–2,World Cup Q
+399,Jamaica,"October 7, 2001",2–1,World Cup Q
+400,Trinidad and Tobago,"November 11, 2001",0–0,World Cup Q
+401,South Korea,"December 9, 2001",0–1,Friendly
+402,South Korea,"January 19, 2002",2–1,Gold Cup GS
+403,Cuba,"January 21, 2002",1–0,Gold Cup GS
+404,El Salvador,"January 27, 2002",4–0,Gold Cup QF
+405,Canada,"January 30, 2002",0(4)–0(2),Gold Cup SF
+406,Costa Rica,"February 2, 2002",2–0,Gold Cup F
+407,Italy,"February 13, 2002",0–1,Friendly
+408,Honduras,"March 2, 2002",4–0,Friendly
+409,Ecuador,"March 10, 2002",1–0,Friendly
+410,Germany,"March 27, 2002",2–4,Friendly
+411,Mexico,"April 3, 2002",1–0,Friendly
+412,Republic of Ireland,"April 17, 2002",1–2,Friendly
+413,Uruguay,"May 12, 2002",2–1,Friendly
+414,Jamaica,"May 16, 2002",5–0,Friendly
+415,Netherlands,"May 19, 2002",0–2,Friendly
+416,Portugal,"June 5, 2002",3–2,World Cup GS
+417,South Korea,"June 10, 2002",1–1,World Cup GS
+418,Poland,"June 14, 2002",1–3,World Cup GS
+419,Mexico,"June 17, 2002",2–0,World Cup R16
+420,Germany,"June 21, 2002",0–1,World Cup QF
+421,El Salvador,"November 17, 2002",2–0,Friendly
+422,Canada,"January 18, 2003",4–0,Friendly
+423,Argentina,"February 18, 2003",0–1,Friendly
+424,Jamaica,"February 12, 2003",2–1,Friendly
+425,Venezuela,"March 29, 2003",2–0,Friendly
+426,Mexico,"May 8, 2003",0–0,Friendly
+427,Wales,"May 26, 2003",2–0,Friendly
+428,New Zealand,"June 8, 2003",2–1,Friendly
+429,Turkey,"June 19, 2003",1–2,Confederations Cup GS
+430,Brazil,"June 21, 2003",0–1,Confederations Cup GS
+431,Cameroon,"June 21, 2003",0–0,Confederations Cup GS
+432,Paraguay,"July 6, 2003",2–0,Friendly
+433,El Salvador,"July 11, 2003",2–0,Gold Cup GS
+434,Martinique,"July 11, 2003",2–0,Gold Cup GS
+435,Cuba,"July 19, 2003",5–0,Gold Cup QF
+436,Brazil,"July 23, 2003",1–2,Gold Cup SF
+437,Costa Rica,"July 26, 2003",3–2,Gold Cup 3PG
+438,Denmark,"January 18, 2004",1–1,Friendly
+439,Netherlands,"February 18, 2004",0–1,Friendly
+440,Haiti,"March 13, 2004",1–1,Friendly
+441,Poland,"March 31, 2004",1–0,Friendly
+442,Mexico,"April 28, 2004",1–0,Friendly
+443,Honduras,"June 2, 2004",4–0,Friendly
+444,Grenada,"June 13, 2004",3–0,World Cup Q
+445,Grenada,"June 20, 2004",3–2,World Cup Q
+446,Poland,"July 11, 2004",1–1,Friendly
+447,Jamaica,"August 18, 2004",1–1,World Cup Q
+448,El Salvador,"September 4, 2004",2–0,World Cup Q
+449,Panama,"September 8, 2004",1–1,World Cup Q
+450,El Salvador,"October 9, 2004",2–0,World Cup Q
+451,Panama,"October 13, 2004",6–0,World Cup Q
+452,Jamaica,"November 17, 2004",1–1,World Cup Q
+453,Trinidad and Tobago,"February 9, 2005",2–1,World Cup Q
+454,Colombia,"March 9, 2005",3–0,Friendly
+455,Honduras,"March 19, 2005",1–0,Friendly
+456,Mexico,"March 27, 2005",1–2,World Cup Q
+457,Guatemala,"March 30, 2005",2–0,World Cup Q
+458,England,"May 28, 2005",1–2,Friendly
+459,Costa Rica,"June 4, 2005",3–0,World Cup Q
+460,Panama,"June 8, 2005",3–0,World Cup Q
+461,Cuba,"July 6, 2005",4–1,Gold Cup GS
+462,Canada,"July 8, 2005",2–0,Gold Cup GS
+463,Costa Rica,"July 11, 2005",0–0,Gold Cup GS
+464,Jamaica,"July 16, 2005",3–1,Gold Cup QF
+465,Honduras,"July 21, 2005",2–1,Gold Cup SF
+466,Panama,"July 24, 2005",0(3)–0(1),Gold Cup F
+467,Trinidad and Tobago,"August 17, 2005",1–0,World Cup Q
+468,Mexico,"September 3, 2005",2–0,World Cup Q
+469,Guatemala,"September 7, 2005",0–0,World Cup Q
+470,Costa Rica,"October 8, 2005",0–3,World Cup Q
+471,Panama,"October 12, 2005",2–0,World Cup Q
+472,Scotland,"November 12, 2005",1–1,Friendly
+473,Canada,"January 22, 2006",0–0,Friendly
+474,Norway,"January 29, 2006",5–0,Friendly
+475,Japan,"February 10, 2006",3–2,Friendly
+476,Guatemala,"February 19, 2006",4–0,Friendly
+477,Poland,"March 1, 2006",1–0,Friendly
+478,Germany,"March 22, 2006",1–4,Friendly
+479,Jamaica,"April 11, 2006",1–1,Friendly
+480,Morocco,"May 23, 2006",0–1,Friendly
+481,Venezuela,"May 26, 2006",2–0,Friendly
+482,Latvia,"May 28, 2006",1–0,Friendly
+483,Czech Republic,"June 12, 2006",0–3,World Cup GS
+484,Italy,"June 17, 2006",1–1,World Cup GS
+485,Ghana,"June 22, 2006",1–2,World Cup GS
+486,Denmark,"January 20, 2007",3–1,Friendly
+487,Mexico,"February 7, 2007",2–0,Friendly
+488,Ecuador,"March 25, 2007",3–1,Friendly
+489,Guatemala,"March 28, 2007",0–0,Friendly
+490,China,"June 2, 2007",4–1,Friendly
+491,Guatemala,"June 7, 2007",1–0,Gold Cup GS
+492,Trinidad and Tobago,"June 9, 2007",2–0,Gold Cup GS
+493,El Salvador,"June 12, 2007",4–0,Gold Cup GS
+494,Panama,"June 16, 2007",2–1,Gold Cup QF
+495,Canada,"June 21, 2007",2–1,Gold Cup SF
+496,Mexico,"June 24, 2007",2–1,Gold Cup F
+497,Argentina,"June 28, 2007",1–4,Copa América GS
+498,Paraguay,"July 2, 2007",1–3,Copa América GS
+499,Colombia,"July 5, 2007",0–1,Copa América GS
+500,Sweden,"August 22, 2007",0–1,Friendly
+501,Brazil,"September 9, 2007",2–4,Friendly
+502,Switzerland,"October 17, 2007",1–0,Friendly
+503,South Africa,"November 17, 2007",1–0,Friendly
+504,Sweden,"January 19, 2008",2–0,Friendly
+505,Mexico,"February 6, 2008",2–2,Friendly
+506,Poland,"March 26, 2008",3–0,Friendly
+507,England,"May 28, 2008",0–2,Friendly
+508,Spain,"June 4, 2008",0–1,Friendly
+509,Argentina,"June 8, 2008",0–0,Friendly
+510,Barbados,"June 15, 2008",8–0,World Cup Q
+511,Barbados,"June 22, 2008",1–0,World Cup Q
+512,Guatemala,"August 20, 2008",1–0,World Cup Q
+513,Cuba,"September 6, 2008",1–0,World Cup Q
+514,Trinidad and Tobago,"September 10, 2008",3–0,World Cup Q
+515,Cuba,"October 11, 2008",6–1,World Cup Q
+516,Trinidad and Tobago,"October 15, 2008",1–2,World Cup Q
+517,Guatemala,"November 19, 2008",2–0,World Cup Q
+518,Sweden,"January 24, 2009",3–2,Friendly
+519,Mexico,"February 11, 2009",2–0,World Cup Q
+520,El Salvador,"March 28, 2009",2–2,World Cup Q
+521,Trinidad and Tobago,"April 1, 2009",3–0,World Cup Q
+522,Costa Rica,"June 3, 2009",1–3,World Cup Q
+523,Honduras,"June 6, 2009",2–1,World Cup Q
+524,Italy,"June 15, 2009",1–3,Confederations Cup GS
+525,Brazil,"June 18, 2009",0–3,Confederations Cup GS
+526,Egypt,"June 21, 2009",3–0,Confederations Cup GS
+527,Spain,"June 24, 2009",2–0,Confederations Cup SF
+528,Brazil,"June 28, 2009",2–3,Confederations Cup F
+529,Grenada,"July 4, 2009",4–0,Gold Cup GS
+530,Honduras,"July 8, 2009",2–0,Gold Cup GS
+531,Haiti,"July 11, 2009",2–2,Gold Cup GS
+532,Panama,"July 18, 2009",2–1,Gold Cup QF
+533,Honduras,"July 23, 2009",2–0,Gold Cup SF
+534,Mexico,"July 26, 2009",0–5,Gold Cup F
+535,Mexico,"August 12, 2009",1–2,World Cup Q
+536,El Salvador,"September 5, 2009",2–1,World Cup Q
+537,Trinidad and Tobago,"September 9, 2009",1–0,World Cup Q
+538,Honduras,"October 10, 2009",3–2,World Cup Q
+539,Costa Rica,"October 14, 2009",2–2,World Cup Q
+540,Slovakia,"November 14, 2009",0–1,Friendly
+541,Denmark,"November 18, 2009",1–3,Friendly
+542,Honduras,"January 23, 2010",1–3,Friendly
+542,El Salvador,"February 24, 2010",2–1,Friendly
+542,Netherlands,"March 3, 2010",1–2,Friendly
+542,Czech Republic,"May 25, 2010",2–4,Friendly
+542,Turkey,"May 29, 2010",2–1,Friendly
+542,Australia,"June 5, 2010",3–1,Friendly
+542,England,"June 12, 2010",1–1,World Cup GS
+542,Slovenia,"June 18, 2010",2–2,World Cup GS
+542,Algeria,"June 23, 2010",1–0,World Cup GS
+542,Ghana,"June 26, 2010",1–2,World Cup R16
+542,Brazil,"August 10, 2010",0–2,Friendly
+542,Poland,"October 9, 2010",2–2,Friendly
+542,Colombia,"October 12, 2010",0–0,Friendly
+542,South Africa,"November 17, 2010",1–0,Friendly
+542,Chile,"January 22, 2011",1–1,Friendly
+542,Argentina,"March 26, 2011",1–1,Friendly
+542,Paraguay,"March 29, 2011",0–1,Friendly
+542,Spain,"June 4, 2011",0–4,Friendly
+560,Canada,"June 7, 2011",2–0,Gold Cup GS
+561,Panama,"June 11, 2011",1–2,Gold Cup GS
+562,Guadeloupe,"June 14, 2011",1–0,Gold Cup GS
+563,Jamaica,"June 19, 2011",2–0,Gold Cup QF
+564,Panama,"June 22, 2011",1–0,Gold Cup SF
+565,Mexico,"June 25, 2011",2–4,Gold Cup F
+566,Mexico,"August 10, 2011",1–1,Friendly
+567,Costa Rica,"September 2, 2011",0–1,Friendly
+568,Belgium,"September 6, 2011",0–1,Friendly
+569,Honduras,"October 8, 2011",1–0,Friendly
+570,Ecuador,"October 11, 2011",0–1,Friendly
+571,France,"November 11, 2011",0–1,Friendly
+572,Slovenia,"November 15, 2011",3–2,Friendly
+573,Venezuela,"January 21, 2012",1–0,Friendly
+574,Panama,"January 25, 2012",1–0,Friendly
+575,Italy,"February 29, 2012",1–0,Friendly
+576,Scotland,"May 26, 2012",5–1,Friendly
+577,Brazil,"May 30, 2012",1–4,Friendly
+578,Canada,"June 3, 2012",0–0,Friendly
+579,Antigua and Barbuda,"June 8, 2012",3–1,World Cup Q
+580,Guatemala,"June 12, 2012",1–1,World Cup Q
+581,Mexico,"August 15, 2012",1–0,Friendly
+582,Jamaica,"September 7, 2012",1–2,World Cup Q
+583,Jamaica,"September 11, 2012",1–0,World Cup Q
+584,Antigua and Barbuda,"October 12, 2012",2–1,World Cup Q
+585,Guatemala,"October 16, 2012",3–1,World Cup Q
+586,Russia,"November 14, 2012",2–2,Friendly
+587,Canada,"January 29, 2013",0–0,Friendly
+588,Honduras,"February 6, 2013",1–2,World Cup Q
+589,Costa Rica,"March 22, 2013",1–0,World Cup Q
+590,Mexico,"March 26, 2013",0–0,World Cup Q
+591,Belgium,"May 29, 2013",2–4,Friendly
+592,Germany,"June 2, 2013",4–3,Friendly
+593,Jamaica,"June 7, 2013",2–1,World Cup Q
+594,Panama,"June 11, 2013",2–0,World Cup Q
+595,Honduras,"June 18, 2013",1–0,World Cup Q
+596,Guatemala,"July 5, 2013",6–0,Friendly
+597,Belize,"July 9, 2013",6–1,Gold Cup GS
+598,Cuba,"July 13, 2013",4–1,Gold Cup GS
+599,Costa Rica,"July 16, 2013",1–0,Gold Cup GS
+600,El Salvador,"July 21, 2013",5–1,Gold Cup QF
+601,Honduras,"July 24, 2013",3–1,Gold Cup SF
+602,Panama,"July 28, 2013",1–0,Gold Cup F
+603,Bosnia and Herzegovina,"August 14, 2013",4–3,Friendly
+604,Costa Rica,"September 6, 2013",1–3,World Cup Q
+605,Mexico,"September 10, 2013",2–0,World Cup Q
+606,Jamaica,"October 11, 2013",2–0,World Cup Q
+607,Panama,"October 15, 2013",3–2,World Cup Q
+608,Scotland,"November 15, 2013",0–0,Friendly
+609,Austria,"November 19, 2013",0–1,Friendly
+610,South Korea,"February 1, 2014",2–0,Friendly
+611,Ukraine,"March 5, 2014",0–2,Friendly
+612,Mexico,"April 2, 2014",2–2,Friendly
+613,Azerbaijan,"May 27, 2014",2–0,Friendly
+614,Turkey,"June 1, 2014",2–1,Friendly
+615,Nigeria,"June 7, 2014",2–1,Friendly
+616,Ghana,"June 16, 2014",2–1,World Cup GS
+617,Portugal,"June 22, 2014",2–2,World Cup GS
+618,Germany,"June 26, 2014",0–1,World Cup GS
+619,Belgium,"July 1, 2014",1–2,World Cup R16
+620,Czech Republic,"September 3, 2014",1–0,Friendly
+621,Ecuador,"October 10, 2014",1–1,Friendly
+622,Honduras,"October 14, 2014",1–1,Friendly
+623,Colombia,"November 14, 2014",1–2,Friendly
+624,Republic of Ireland,"November 18, 2014",1–4,Friendly
+625,Chile,"January 28, 2015",2–3,Friendly
+626,Panama,"February 8, 2015",2–0,Friendly
+627,Denmark,"March 25, 2015",2–3,Friendly
+628,Switzerland,"March 31, 2015",1–1,Friendly
+629,Mexico,"April 15, 2015",2–0,Friendly
+630,Netherlands,"June 5, 2015",4–3,Friendly
+631,Germany,"June 10, 2015",2–1,Friendly
+632,Guatemala,"July 3, 2015",4–0,Friendly
+633,Honduras,"July 7, 2015",2–1,Gold Cup GS
+634,Haiti,"July 10, 2015",1–0,Gold Cup GS
+635,Panama,"July 13, 2015",1–1,Gold Cup GS
+636,Cuba,"July 18, 2015",6–0,Gold Cup QF
+637,Jamaica,"July 22, 2015",1–2,Gold Cup SF
+638,Panama,"July 25, 2015",1(2)–1(3),Gold Cup 3PG
+639,Peru,"September 4, 2015",2–1,Friendly
+640,Brazil,"September 8, 2015",1–4,Friendly
+641,Mexico,"October 10, 2015",2–3,CONCACAF Cup
+642,Costa Rica,"October 13, 2015",0–1,Friendly
+643,Saint Vincent and the Grenadines,"November 13, 2015",6–1,World Cup Q
+644,Trinidad and Tobago,"November 17, 2015",0–0,World Cup Q
+645,Iceland,"January 31, 2016",3–2,Friendly
+646,Canada,"February 5, 2016",1–0,Friendly
+647,Guatemala,"March 25, 2016",0–2,World Cup Q
+648,Guatemala,"March 29, 2016",4–0,World Cup Q
+649,Puerto Rico,"May 22, 2016",3–1,Friendly
+650,Ecuador,"May 25, 2016",1–0,Friendly
+651,Bolivia,"May 28, 2016",4–0,Friendly
+652,Colombia,"June 3, 2016",0–2,Copa América Centenario GS
+653,Costa Rica,"June 7, 2016",4–0,Copa América Centenario GS
+654,Paraguay,"June 11, 2016",1–0,Copa América Centenario GS
+655,Ecuador,"June 16, 2016",2–1,Copa América Centenario QF
+656,Argentina,"June 21, 2016",0–4,Copa América Centenario SF
+657,Colombia,"June 25, 2016",0–1,Copa América Centenario 3PG
+658,Saint Vincent and the Grenadines,"September 2, 2016",6–0,World Cup Q
+659,Trinidad and Tobago,"September 6, 2016",4–0,World Cup Q
+660,Cuba,"October 7, 2016",2–0,Friendly
+661,New Zealand,"October 11, 2016",1–1,Friendly
+662,Mexico,"November 11, 2016",1–2,World Cup Q
+663,Costa Rica,"November 15, 2016",0–4,World Cup Q
+664,Serbia,"January 29, 2017",0–0,Friendly
+665,Jamaica,"February 3, 2017",1–0,Friendly
+666,Honduras,"March 24, 2017",6–0,World Cup Q
+667,Panama,"March 28, 2017",1–1,World Cup Q
+668,Venezuela,"June 3, 2017",1–1,Friendly
+669,Trinidad and Tobago,"June 8, 2017",2–0,World Cup Q
+670,Mexico,"June 11, 2017",1–1,World Cup Q
+671,Ghana,"July 1, 2017",2–1,Friendly
+672,Panama,"July 8, 2017",1–1,Gold Cup GS
+673,Martinique,"July 12, 2017",3–2,Gold Cup GS
+674,Nicaragua,"July 15, 2017",3–0,Gold Cup GS
+675,El Salvador,"July 19, 2017",2–0,Gold Cup QF
+676,Costa Rica,"July 22, 2017",2–0,Gold Cup SF
+677,Jamaica,"July 26, 2017",2–1,Gold Cup F
+678,Costa Rica,"September 1, 2017",0–2,World Cup Q
+679,Honduras,"September 5, 2017",1–1,World Cup Q
+680,Panama,"October 6, 2017",4–0,World Cup Q
+681,Trinidad and Tobago,"October 10, 2017",1–2,World Cup Q
+682,Portugal,"November 14, 2017",1–1,Friendly
+683,Bosnia and Herzegovina,"January 28, 2018",0–0,Friendly
+684,Paraguay,"March 27, 2018",1–0,Friendly
+685,Bolivia,"May 28, 2018",3–0,Friendly
+686,Republic of Ireland,"June 2, 2018",1–2,Friendly
+687,France,"June 9, 2018",1–1,Friendly
+688,Brazil,"September 7, 2018",0–2,Friendly
+689,Mexico,"September 11, 2018",1–0,Friendly
+690,Colombia,"October 11, 2018",2–4,Friendly
+691,Peru,"October 15, 2018",1–1,Friendly
+692,England,"November 15, 2018",0–3,Friendly
+693,Italy,"November 20, 2018",0–1,Friendly
+694,Panama,"January 27, 2019",3–0,Friendly
+695,Costa Rica,"February 2, 2019",2–0,Friendly
+696,Ecuador,"March 21, 2019",1–0,Friendly
+697,Chile,"March 26, 2019",1–1,Friendly
+698,Jamaica,"June 5, 2019",0–1,Friendly
+699,Venezuela,"June 9, 2019",0–3,Friendly
+700,Guyana,"June 18, 2019",4–0,Gold Cup GS
+701,Trinidad and Tobago,"June 22, 2019",6–0,Gold Cup GS
+702,Panama,"June 26, 2019",1–0,Gold Cup GS
+703,Curaçao,"June 30, 2019",1–0,Gold Cup QF
+704,Jamaica,"July 3, 2019",3–1,Gold Cup SF
+705,Mexico,"July 7, 2019",0–1,Gold Cup F
+706,Mexico,"September 6, 2019",0–3,Friendly
+707,Uruguay,"September 10, 2019",1–1,Friendly
+708,Cuba,"October 11, 2019",7–0,Nations League GS
+709,Canada,"October 15, 2019",0–2,Nations League GS
+710,Canada,"November 15, 2019",4–1,Nations League GS
+711,Cuba,"November 19, 2019",4–0,Nations League GS
+712,Costa Rica,"February 1, 2020",1–0,Friendly
+713,Wales,"November 12, 2020",0–0,Friendly
+714,Panama,"November 16, 2020",6–2,Friendly
+715,El Salvador,"December 9, 2020",6–0,Friendly
+716,Trinidad and Tobago,"January 31, 2021",7–0,Friendly
+717,Jamaica,"March 25, 2021",4–1,Friendly
+718,Northern Ireland,"March 28, 2021",2–1,Friendly
+719,Switzerland,"May 30, 2021",1–2,Friendly
+720,Honduras,"June 3, 2021",1–0,Nations League SF
+721,Mexico,"June 6, 2021",3–2,Nations League F
+722,Costa Rica,"June 9, 2021",4–0,Friendly
+723,Haiti,"July 11, 2021",1–0,Gold Cup GS
+724,Martinique,"July 15, 2021",6–1,Gold Cup GS
+725,Canada,"July 18, 2021",1–0,Gold Cup GS
+726,Jamaica,"July 25, 2021",1–0,Gold Cup QF
+727,Qatar,"July 29, 2021",1–0,Gold Cup SF
+728,Mexico,"August 1, 2021",1–0,Gold Cup F
+729,El Salvador,"September 2, 2021",0–0,World Cup Q
+730,Canada,"September 5, 2021",1–1,World Cup Q
+731,Honduras,"September 8, 2021",4–1,World Cup Q
+732,Jamaica,"October 7, 2021",2–0,World Cup Q
+733,Panama,"October 10, 2021",0–1,World Cup Q
+734,Costa Rica,"October 13, 2021",2–1,World Cup Q
+735,Mexico,"November 12, 2021",2–0,World Cup Q
+736,Jamaica,"November 16, 2021",1–1,World Cup Q
+737,Bosnia and Herzegovina,"December 18, 2021",1–0,Friendly
+738,El Salvador,"January 27, 2022",1–0,World Cup Q
+739,Canada,"January 30, 2022",0–2,World Cup Q
+740,Honduras,"February 2, 2022",3–0,World Cup Q
+741,Mexico,"March 24, 2022",0–0,World Cup Q
+742,Panama,"March 27, 2022",5–1,World Cup Q
+743,Costa Rica,"March 30, 2022",0–2,World Cup Q
+744,Morocco,"June 1, 2022",3–0,Friendly
+745,Uruguay,"June 5, 2022",0–0,Friendly
+746,Grenada,"June 10, 2022",5–0,Nations League GS
+747,El Salvador,"June 14, 2022",1–1,Nations League GS
+748,Japan,"September 23, 2022",0–2,Friendly
+749,Saudi Arabia,"September 27, 2022",0–0,Friendly
+750,Wales,"November 21, 2022",1–1,World Cup GS
+751,England,"November 25, 2022",0–0,World Cup GS
+752,Iran,"November 29, 2022",1–0,World Cup GS
+753,Netherlands,"December 3, 2022",1–3,World Cup R16
+754,Serbia,"January 25, 2023",1–2,Friendly
+755,Colombia,"January 28, 2023",0–0,Friendly
+756,Grenada,"March 24, 2023",7–1,Nations League GS
+757,El Salvador,"March 27, 2023",1–0,Nations League GS
+758,Mexico,"April 19, 2023",1–1,Friendly
+759,Mexico,"June 15, 2023",3–0,Nations League SF
+760,Canada,"June 18, 2023",2–0,Nations League F
+761,Jamaica,"June 24, 2023",1–1,Gold Cup GS
+762,Saint Kitts and Nevis,"June 28, 2023",6–0,Gold Cup GS
+763,Trinidad and Tobago,"July 2, 2023",6–0,Gold Cup GS
+764,Canada,"July 9, 2023",2(3)–2(2),Gold Cup QF
+765,Panama,"July 12, 2023",1(4)–1(5),Gold Cup SF
+766,Uzbekistan,"September 9, 2023",3–0,Friendly
+767,Oman,"September 12, 2023",4–0,Friendly
+768,Germany,"October 14, 2023",1–3,Friendly
+769,Ghana,"October 17, 2023",4–0,Friendly
+770,Trinidad and Tobago,"November 16, 2023",3–0,Nations League QF
+771,Trinidad and Tobago,"November 20, 2023",1–2,Nations League QF
+772,Slovenia,"January 20, 2024",0–1,Friendly
+773,Jamaica,"March 21, 2024",3–1,Nations League SF
+774,Mexico,"March 24, 2024",2–0,Nations League F
+775,Colombia,"June 8, 2024",1–5,Friendly
+776,Brazil,"June 12, 2024",1–1,Friendly
+777,Bolivia,"June 23, 2024",2–0,Copa América GS
+778,Panama,"June 27, 2024",1–2,Copa América GS
+779,Uruguay,"July 1, 2024",0–1,Copa América GS
+780,Canada,"September 7, 2024",1–2,Friendly
+781,New Zealand,"September 10, 2024",1–1,Friendly
+782,Panama,"October 12, 2024",2–0,Friendly
+783,Mexico,"October 15, 2024",0–2,Friendly
+784,Jamaica,"November 14, 2024",1–0,Nations League QF
+785,Jamaica,"November 18, 2024",4–2,Nations League QF
+786,Venezuela,"January 18, 2025",3–1,Friendly
+787,Costa Rica,"January 22, 2025",3–0,Friendly
+788,Panama,"March 20, 2025",0–1,Nations League SF
+789,Canada,"March 23, 2025",1–2,Nations League 3PG
