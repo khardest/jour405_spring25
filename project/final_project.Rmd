@@ -2,6 +2,67 @@
 title: "final_project"
 output: html_document
 ---
+Test: ANOVA
+
+```{r}
+combined_data <- bind_rows(
+   uswnt_games |> mutate(team = "USWNT"),
+  usmnt_games |> mutate(team = "USMNT")
+)
+
+unique(combined_data$Event)
+
+combined_data <- combined_data |> 
+  mutate(Event = case_when(
+    str_detect(Event, "World Cup") ~ "World Cup",
+    str_detect(Event, "Olympics") ~ "Olympics",
+    str_detect(Event, "Friendly") ~ "Friendly",
+    TRUE ~ "Other"
+  ))
+
+# USWNT ANOVA
+uswnt_anova <- aov(differential ~ Event, data = filter(combined_data, team == "USWNT"))
+summary(uswnt_anova)
+
+# USMNT ANOVA
+usmnt_anova <- aov(differential ~ Event, data = filter(combined_data, team == "USMNT"))
+summary(usmnt_anova)
+
+```
+
+```{r}
+tukey_results <- TukeyHSD(usmnt_anova)
+print(tukey_results)
+
+tukey_results <- TukeyHSD(uswnt_anova)
+print(tukey_results)
+```
+
+These tests helped me to determine if the performance of these teams varies by tournament type. There were four tournament categories: Friendly, Olympics, World Cup and Other. 
+
+In terms of the ANOVA test, both teams had p values less than .05, showing the teams performances vary based on the type of game. The USMNT p value was smaller showing their performances varies more.
+
+In terms of the USWNT, when comparing Olympics vs Friendlies, the USWNT scored about 1.43 fewer goals in Olympic games. They also scored about 1.3 more goals in other tournaments than in the Olympics. These were the only comparisons with p values that showed significance.
+
+For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 4.65 goals lower in the olympics. They performed better in the world cup than in the olympics with a 5.01 higher goal average. They also performed better in other tournaments than in the Olympics. 
+
+
+
+
+
+Test: T-Test
+
+```{r}
+alpha_level <- .05
+
+t.test(uswnt_games$differential, usmnt_games$differential,
+       alternative = "two.sided")
+```
+This is a t-test comparing the goal differentials in games for both teams. Based on the p value which is < 2.2e-16, almost close to zero, the results are statistically significant meaning there is a significant difference in the margin the teams win their games by. The USWNT wins their games by about 2.2 more goals per game than then mens team, which supports my hypothesis that the USWNT performs better. 
+
+
+
+
 
 The Tests I could run:
 
