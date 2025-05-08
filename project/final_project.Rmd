@@ -2,8 +2,71 @@
 title: "final_project"
 output: html_document
 ---
-Test: ANOVA
 
+Load libraries:
+
+```{r}
+library(tidyverse)
+library(lubridate)
+```
+
+
+Step 1: Create dataframes
+
+```{r}
+usmnt_games <- read_csv("usmnt game scores - Sheet1.csv")
+```
+```{r}
+uswnt_games <- read_csv("uswnt games - Sheet1.csv")
+```
+
+Links to data:
+
+men-
+https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team_results
+
+women-
+https://en.wikipedia.org/wiki/United_States_women%27s_national_soccer_team_results
+
+Step 2: Mutate the dataframes to have a goal_differential column and describe the data. 
+
+
+```{r}
+uswnt_games <- uswnt_games |> mutate(Date=mdy(Date))
+
+usmnt_games <- usmnt_games |> mutate(Date=mdy(Date))
+
+```
+```{r}
+uswnt_games <- mutate(uswnt_games, differential = team_score - opponent_score)
+usmnt_games <- mutate(usmnt_games, differential = Team_Score - Opponent_Score)
+```
+
+Description of data: These dataframes include the match number, opponent, date, result and event type for every USMNT match from 1916 to 2025 and every USWNT match from 1985 to 2025.For my analysis, the most important column will most likely be the score result, as my project will focus on comparing the two teams goal differentials. If I choose to do further analysis on the strength of the opponent or the seriousness of the games, the opponent and event columns will be important too. I will need to add columns that specify goals scored and goals allowed as well as if the match was a knockout game or if the opponent was ranked highly at the time. 
+
+Step 3: Brainstorm ideas for statistical tests
+
+The Tests I could run:
+
+For my project, I am trying to use game/goal data to see if the USWNT or the USMNT is actually better at soccer. My hypothesis is that the womens team is better. To test this, I think I could do a two sample t-test, in which my null hypothesis would be that the USWNT and the USMNT have the same/similar goal differential, and my alternative hypothesis could be that one team has a significantly higher average goal differential. This test will tell me if the difference in goal differential is actually significant enough to help draw the conclusion that one team is better than the other. 
+
+I think I have enough data for this as I have over 700 game scores for each team that esentially encompasses every game each team has played. I also think this is the most appropriate test because it can compare two groups.
+
+I also think it would be helpful to do visualizations/charts of the teams average goals per game just to see if visually it looks like a large difference or not. Sometimes a visual aid can mean more to an audience member than statistics. 
+
+Step 4: Run a t-test
+
+```{r}
+alpha_level <- .05
+
+t.test(uswnt_games$differential, usmnt_games$differential,
+       alternative = "two.sided")
+```
+
+This is a t-test comparing the goal differentials in games for both teams. Based on the p value which is < 2.2e-16, almost close to zero, the results are statistically significant meaning there is a significant difference in the margin the teams win their games by. The USWNT wins their games by about 2.2 more goals per game than then mens team, which supports my hypothesis that the USWNT performs better. 
+
+
+Step 5: Run an ANOVA/Tukey test
 ```{r}
 combined_data <- bind_rows(
    uswnt_games |> mutate(team = "USWNT"),
@@ -46,68 +109,22 @@ In terms of the USWNT, when comparing Olympics vs Friendlies, the USWNT scored a
 
 For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 4.65 goals lower in the olympics. They performed better in the world cup than in the olympics with a 5.01 higher goal average. They also performed better in other tournaments than in the Olympics. 
 
-
-
-
-
-Test: T-Test
-
+Step 6: Run a two way ANOVA/Tukey Test
 ```{r}
-alpha_level <- .05
+two_way_anova <- aov(differential ~ team * Event, data = combined_data)
 
-t.test(uswnt_games$differential, usmnt_games$differential,
-       alternative = "two.sided")
-```
-This is a t-test comparing the goal differentials in games for both teams. Based on the p value which is < 2.2e-16, almost close to zero, the results are statistically significant meaning there is a significant difference in the margin the teams win their games by. The USWNT wins their games by about 2.2 more goals per game than then mens team, which supports my hypothesis that the USWNT performs better. 
+tukey_results_two_way <- TukeyHSD(two_way_anova)
+print(tukey_results_two_way)
 
-
-
-
-
-The Tests I could run:
-
-For my project, I am trying to use game/goal data to see if the USWNT or the USMNT is actually better at soccer. My hypothesis is that the womens team is better. To test this, I think I could do a two sample t-test, in which my null hypothesis would be that the USWNT and the USMNT have the same/similar goal differential, and my alternative hypothesis could be that one team has a significantly higher average goal differential. This test will tell me if the difference in goal differential is actually significant enough to help draw the conclusion that one team is better than the other. 
-
-I think I have enough data for this as I have over 700 game scores for each team that esentially encompasses every game each team has played. I also think this is the most appropriate test because it can compare two groups.
-
-I also think it would be helpful to do visualizations/charts of the teams average goals per game just to see if visually it looks like a large difference or not. Sometimes a visual aid can mean more to an audience member than statistics. 
-
-
-
-
-Links to data:
-
-men-
-https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team_results
-
-women-
-https://en.wikipedia.org/wiki/United_States_women%27s_national_soccer_team_results
-
-Creating my dataframes: 
-
-```{r}
-library(tidyverse)
-library(lubridate)
-```
-```{r}
-usmnt_games <- read_csv("usmnt game scores - Sheet1.csv")
-```
-```{r}
-uswnt_games <- read_csv("uswnt games - Sheet1.csv")
 ```
 
-Description of data: These dataframes include the match number, opponent, date, result and event type for every USMNT match from 1916 to 2025 and every USWNT match from 1985 to 2025.For my analysis, the most important column will most likely be the score result, as my project will focus on comparing the two teams goal differentials. If I choose to do further analysis on the strength of the opponent or the seriousness of the games, the opponent and event columns will be important too. I will need to add columns that specify goals scored and goals allowed as well as if the match was a knockout game or if the opponent was ranked highly at the time. 
 
 
-```{r}
-uswnt_games <- uswnt_games |> mutate(Date=mdy(Date))
 
-usmnt_games <- usmnt_games |> mutate(Date=mdy(Date))
 
-```
-```{r}
-uswnt_games <- mutate(uswnt_games, differential = team_score - opponent_score)
-usmnt_games <- mutate(usmnt_games, differential = Team_Score - Opponent_Score)
 
-```
+
+
+
+
 
