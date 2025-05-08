@@ -100,7 +100,6 @@ print(tukey_results)
 tukey_results <- TukeyHSD(uswnt_anova)
 print(tukey_results)
 ```
-
 These tests helped me to determine if the performance of these teams varies by tournament type. There were four tournament categories: Friendly, Olympics, World Cup and Other. 
 
 In terms of the ANOVA test, both teams had p values less than .05, showing the teams performances vary based on the type of game. The USMNT p value was smaller showing their performances varies more.
@@ -112,6 +111,7 @@ For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 
 Step 6: Run a two way ANOVA/Tukey Test
 ```{r}
 two_way_anova <- aov(differential ~ team * Event, data = combined_data)
+summary(two_way_anova)
 
 tukey_results_two_way <- TukeyHSD(two_way_anova)
 print(tukey_results_two_way)
