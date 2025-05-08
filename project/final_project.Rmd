@@ -4,7 +4,6 @@ output: html_document
 ---
 
 Load libraries:
-
 ```{r}
 library(tidyverse)
 library(lubridate)
@@ -12,7 +11,6 @@ library(lubridate)
 
 
 Step 1: Create dataframes
-
 ```{r}
 usmnt_games <- read_csv("usmnt game scores - Sheet1.csv")
 ```
@@ -21,16 +19,14 @@ uswnt_games <- read_csv("uswnt games - Sheet1.csv")
 ```
 
 Links to data:
-
 men-
 https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team_results
-
 women-
 https://en.wikipedia.org/wiki/United_States_women%27s_national_soccer_team_results
 
+
+
 Step 2: Mutate the dataframes to have a goal_differential column and describe the data. 
-
-
 ```{r}
 uswnt_games <- uswnt_games |> mutate(Date=mdy(Date))
 
@@ -47,7 +43,6 @@ Description of data: These dataframes include the match number, opponent, date, 
 Step 3: Brainstorm ideas for statistical tests
 
 The Tests I could run:
-
 For my project, I am trying to use game/goal data to see if the USWNT or the USMNT is actually better at soccer. My hypothesis is that the womens team is better. To test this, I think I could do a two sample t-test, in which my null hypothesis would be that the USWNT and the USMNT have the same/similar goal differential, and my alternative hypothesis could be that one team has a significantly higher average goal differential. This test will tell me if the difference in goal differential is actually significant enough to help draw the conclusion that one team is better than the other. 
 
 I think I have enough data for this as I have over 700 game scores for each team that esentially encompasses every game each team has played. I also think this is the most appropriate test because it can compare two groups.
@@ -55,7 +50,6 @@ I think I have enough data for this as I have over 700 game scores for each team
 I also think it would be helpful to do visualizations/charts of the teams average goals per game just to see if visually it looks like a large difference or not. Sometimes a visual aid can mean more to an audience member than statistics. 
 
 Step 4: Run a t-test
-
 ```{r}
 alpha_level <- .05
 
@@ -91,15 +85,14 @@ summary(uswnt_anova)
 usmnt_anova <- aov(differential ~ Event, data = filter(combined_data, team == "USMNT"))
 summary(usmnt_anova)
 
-```
-
-```{r}
 tukey_results <- TukeyHSD(usmnt_anova)
 print(tukey_results)
 
 tukey_results <- TukeyHSD(uswnt_anova)
 print(tukey_results)
+
 ```
+
 These tests helped me to determine if the performance of these teams varies by tournament type. There were four tournament categories: Friendly, Olympics, World Cup and Other. 
 
 In terms of the ANOVA test, both teams had p values less than .05, showing the teams performances vary based on the type of game. The USMNT p value was smaller showing their performances varies more.
@@ -107,6 +100,7 @@ In terms of the ANOVA test, both teams had p values less than .05, showing the t
 In terms of the USWNT, when comparing Olympics vs Friendlies, the USWNT scored about 1.43 fewer goals in Olympic games. They also scored about 1.3 more goals in other tournaments than in the Olympics. These were the only comparisons with p values that showed significance.
 
 For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 4.65 goals lower in the olympics. They performed better in the world cup than in the olympics with a 5.01 higher goal average. They also performed better in other tournaments than in the Olympics. 
+
 
 Step 6: Run a two way ANOVA/Tukey Test
 ```{r}
