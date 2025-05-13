@@ -3,20 +3,7 @@ title: "final_project"
 output: html_document
 ---
 
-Load libraries:
-```{r}
-library(tidyverse)
-library(lubridate)
-```
-
-
-Step 1: Create dataframes
-```{r}
-usmnt_games <- read_csv("usmnt game scores - Sheet1.csv")
-```
-```{r}
-uswnt_games <- read_csv("uswnt games - Sheet1.csv")
-```
+The topic: For this assignment, I decided to look at historical data for both the US Men's and Women's National Soccer Teams to see who performs better. To compare performance I will compare different types of data such as their goal differentials (goals scored vs goals allowed) and their performance across event types (world cups, olympics, friendlies) to see if one team significantly outperforms the other. My hypothesis is that the USWNT has both scored more goals and performed better in higher stakes tournaments than the USMNT. I found my data on Wikipedia, which incuded the scores of each game they've ever played, their opponents, and the event type. 
 
 Links to data:
 men-
@@ -24,9 +11,30 @@ https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team_results
 women-
 https://en.wikipedia.org/wiki/United_States_women%27s_national_soccer_team_results
 
+Load libraries:
+```{r}
+library(tidyverse)
+library(lubridate)
+```
 
 
-Step 2: Mutate the dataframes to have a goal_differential column and describe the data. 
+Step 1: Create data frames and mutate them
+
+This code will take the existing csv files that hold the data, and put them into data frames in rstudio so the data can be used. 
+
+```{r}
+usmnt_games <- read_csv("usmnt game scores - Sheet1.csv")
+```
+```{r}
+uswnt_games <- read_csv("uswnt games - Sheet1.csv")
+```
+
+This code has two purposes: 
+
+1. It will convert the data column from text to date objects. This will ensure the date column can be used for organizational aspects like filtering by year or sorting.
+
+2. It will add a new column to both data frames called differential. This column is the teams score minus the opponent score. A positive number means the team won by that margin, and a negative number means the team lost by that margin. This column will allow me to perform statistical tests based on how the team performed in terms of goals scored.
+
 ```{r}
 uswnt_games <- uswnt_games |> mutate(Date=mdy(Date))
 
@@ -38,38 +46,85 @@ uswnt_games <- mutate(uswnt_games, differential = team_score - opponent_score)
 usmnt_games <- mutate(usmnt_games, differential = Team_Score - Opponent_Score)
 ```
 
-Description of data: These dataframes include the match number, opponent, date, result and event type for every USMNT match from 1916 to 2025 and every USWNT match from 1985 to 2025.For my analysis, the most important column will most likely be the score result, as my project will focus on comparing the two teams goal differentials. If I choose to do further analysis on the strength of the opponent or the seriousness of the games, the opponent and event columns will be important too. I will need to add columns that specify goals scored and goals allowed as well as if the match was a knockout game or if the opponent was ranked highly at the time. 
+Description of data: These data frames contain historical match records for both the US Mens National Soccer Team from 1916 to 1925 and the US Women's National Team from 1985 to 2025. Each record includes the match number, opponent, date, final score result and event type. 
+
+The most critical columns for my project are the team_score and opponent_score which I mutated into a column called goal_differential column by subtracting the opponent's score from the team score. This column will serve as the primary basis for comparing the two team's performance over time. 
+
+Another important column is the event type, as I will use this in combination with the goal differential column to see if the teams perform better in certain event types (friendlies, world cups, etc). 
+
 
 Step 3: Brainstorm ideas for statistical tests
 
 The Tests I could run:
-For my project, I am trying to use game/goal data to see if the USWNT or the USMNT is actually better at soccer. My hypothesis is that the womens team is better. To test this, I think I could do a two sample t-test, in which my null hypothesis would be that the USWNT and the USMNT have the same/similar goal differential, and my alternative hypothesis could be that one team has a significantly higher average goal differential. This test will tell me if the difference in goal differential is actually significant enough to help draw the conclusion that one team is better than the other. 
+For my project, I am trying to use game/goal data to see if the USWNT or the USMNT is actually better at soccer. My hypothesis is that the women's team is better. To test this, I think I could do a two sample t-test, in which my null hypothesis would be that the USWNT and the USMNT have the same/similar goal differential, and my alternative hypothesis could be that one team has a significantly higher average goal differential. This test will tell me if the difference in goal differential is actually significant enough to help draw the conclusion that one team is better than the other. 
 
-I think I have enough data for this as I have over 700 game scores for each team that esentially encompasses every game each team has played. I also think this is the most appropriate test because it can compare two groups.
+I think I have enough data for this as I have over 700 game scores for each team that essentially encompasses every game each team has played. I also think this is the most appropriate test because it can compare two groups.
 
 I also think it would be helpful to do visualizations/charts of the teams average goals per game just to see if visually it looks like a large difference or not. Sometimes a visual aid can mean more to an audience member than statistics. 
 
 Step 4: Run a t-test
+
+This code will conduct a two sample t-test, which will compare the average goal differentials between the USWNT and USMNT. The null hypothesis is the two groups have the same mean, while the alternative hypothesis is that the two groups will have different means. If the p value is less than the significance level I chose, which is .05, I can reject the null hypothesis and conclude the means are significantly different. 
 ```{r}
 alpha_level <- .05
 
 t.test(uswnt_games$differential, usmnt_games$differential,
        alternative = "two.sided")
 ```
+The two sample t-test gave me a t-statistic of 17.28 with about 1499 degrees of freedom and a p value of less than 2.2e-16. This p value is extremely small and less than .05, showing the difference between the team's average goal differentials is statistically significant.
 
-This is a t-test comparing the goal differentials in games for both teams. Based on the p value which is < 2.2e-16, almost close to zero, the results are statistically significant meaning there is a significant difference in the margin the teams win their games by. The USWNT wins their games by about 2.2 more goals per game than then mens team, which supports my hypothesis that the USWNT performs better. 
+The 95% confidence interval for the difference in means ranges from 1.94 to 2.43 goals, meaning we can be 95% confident the true average difference in goal differential lies somewhere in the range. Specifically the USWNT's mean goal differential is about 2.4 while the USMNT's is only .22. 
 
+The results of this test support my hypothesis that the USWNT performs better overall by winning their games by larger margins. 
 
-Step 5: Run an ANOVA/Tukey test
+Step 5: Create a bar graph that visually shows the average goal differentials for each team. 
+
+For this step, I first standardized the column names so the column names in the USMNT and USWNT data frames, so I could bind the two data frames together. Making a single data frame makes it easier to create visualizations and perform calculations. Before binding I created a team column to label each game by Team so they could be differentiated in the larger data frame. After binding the games of the two teams, I calculated the mean goal differential for each team and stored it in a data frame called mean_diffs. 
+
 ```{r}
-combined_data <- bind_rows(
-   uswnt_games |> mutate(team = "USWNT"),
-  usmnt_games |> mutate(team = "USMNT")
-)
 
-unique(combined_data$Event)
+colnames(usmnt_games)[colnames(usmnt_games) == "Team_Score"] <- "team_score"
+colnames(usmnt_games)[colnames(usmnt_games) == "Opponent_Score"] <- "opponent_score"
 
-combined_data <- combined_data |> 
+uswnt_games <- uswnt_games |> 
+  mutate(Team = "USWNT")
+
+usmnt_games <- usmnt_games |> 
+  mutate(Team = "USMNT")
+
+combined_games <- rbind(uswnt_games, usmnt_games)
+
+mean_diffs <- combined_games |> 
+  group_by(Team) |> 
+  summarise(mean_differential = mean(differential))
+
+
+```
+
+After performing that code, I am able to use ggplot to create a bar graph that shows the differences in mean goal differential between the two teams. 
+
+```{r}
+ggplot(mean_diffs, aes(x = Team, y = mean_differential, fill = Team)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Average Goal Differential: USWNT vs USMNT",
+       x = "Team",
+       y = "Average Goal Differential") +
+  theme_minimal()
+```
+As you can see, this bar graph shows that the USWNT has a much larger goal differential than the USMNT. This supports the results of the t-test results that showed there was a significant difference between the teams' goal differentials. 
+
+
+Step 6: Run an ANOVA/Tukey test
+
+I next wanted to run an ANOVA and Tukey test for each team to see if the goal differentials for each team varied by the type of soccer game. First, I standardized the events into 4 different categories: World Cup, Olympics, Friendly and Other. 
+
+Then, I ran the ANOVA test, which showed me if the goal differential across events was statistically significant. The null hypothesis is that all event types have the same average goal differential and the alternative hypothesis is that at least one event type has a different mean. If the p value is below .05 I would reject the null hypothesis. 
+
+Since in this case the ANOVA found significant results(explained more below), the Tukey test shows me exactly which pairs of groups differ. 
+
+```{r}
+
+combined_games <- combined_games |> 
   mutate(Event = case_when(
     str_detect(Event, "World Cup") ~ "World Cup",
     str_detect(Event, "Olympics") ~ "Olympics",
@@ -78,11 +133,11 @@ combined_data <- combined_data |>
   ))
 
 # USWNT ANOVA
-uswnt_anova <- aov(differential ~ Event, data = filter(combined_data, team == "USWNT"))
+uswnt_anova <- aov(differential ~ Event, data = filter(combined_games, Team == "USWNT"))
 summary(uswnt_anova)
 
 # USMNT ANOVA
-usmnt_anova <- aov(differential ~ Event, data = filter(combined_data, team == "USMNT"))
+usmnt_anova <- aov(differential ~ Event, data = filter(combined_games, Team == "USMNT"))
 summary(usmnt_anova)
 
 tukey_results <- TukeyHSD(usmnt_anova)
@@ -97,14 +152,20 @@ These tests helped me to determine if the performance of these teams varies by t
 
 In terms of the ANOVA test, both teams had p values less than .05, showing the teams performances vary based on the type of game. The USMNT p value was smaller showing their performances varies more.
 
-In terms of the USWNT, when comparing Olympics vs Friendlies, the USWNT scored about 1.43 fewer goals in Olympic games. They also scored about 1.3 more goals in other tournaments than in the Olympics. These were the only comparisons with p values that showed significance.
+In terms of the USWNT, when comparing Olympics vs Friendlies, the USWNT scored about 1.43 fewer goals in Olympic games. They also scored about 1.3 more goals in Other tournaments than in the Olympics. These were the only comparisons with p values that showed significance. 
 
-For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 4.65 goals lower in the olympics. They performed better in the world cup than in the olympics with a 5.01 higher goal average. They also performed better in other tournaments than in the Olympics. 
+For the USMNT, when comparing Olympics vs Friendlies, the goal differential was 4.65 goals lower in the Olympics. They performed better in the world cup than in the Olympics with a 5.01 higher goal average. They also performed better in Other tournaments than in the Olympics. 
 
+Overall, while both teams show variability based on game type, the USMNT’s performance is more drastically affected, particularly in the Olympic setting where their goal differential significantly declines.
 
-Step 6: Run a two way ANOVA/Tukey Test
+Step 7: Run a two way ANOVA/Tukey Test
+
+A two way anova test checks whether two different factors influence a numerical outcome. In this case I am looking into of the Team and the Event Type impact goal differential. The hypotheses for this test are if there is an overall difference in goal differential, if goal differential varies by event type regardless of team and if the difference between the teams depend on the event type. 
+
+The Tukey test conducted after will allow me to compare all pairs of groups means and identify which pairs are significant.
+
 ```{r}
-two_way_anova <- aov(differential ~ team * Event, data = combined_data)
+two_way_anova <- aov(differential ~ Team * Event, data = combined_games)
 summary(two_way_anova)
 
 tukey_results_two_way <- TukeyHSD(two_way_anova)
@@ -112,13 +173,55 @@ print(tukey_results_two_way)
 
 ```
 
+By looking at the results from the two-way ANOVA and corresponding Tukey test I am able to draw multiple conclusions. When looking at the summary of the two-way anova, Team, Event and Team:Event hall have p values much smaller than .05. This means the teams have significantly different overall goal differentials, their performance varies across event types and the effect of event type depends on the team (the teams are impacted differently based on the type of game).
+
+When looking at event types across both teams, 3 pairs were deemed statistically significant. Olympics vs Friendly had a p value of .00002 and a difference of -1.65, showing that teams perform worse in the olympics than in friendlies. Other vs Olympics had a difference of 1.92 and a pvalue of .000001 showing that the teams perform better in other tournaments than in the Olympics. Finally when looking at World Cup vs Olympics, there was a difference of 1.67 and a p value of .000058 showing that teams perform better in the World Cup than in the Olympics. So, both teams tend to perform worse in the Olympics, but better in World Cup and Other tournaments compared to the Olympics. 
+
+Step 8: Create a Boxplot to visually display the two way ANOVA test
+
+In general, when looking at a boxplot, the box shows the middle 50 percent of the data, the line inside the box shows the median, the whiskers show the range of the data and the dots represent outliers. 
+```{r}
+ggplot(combined_games, aes(x = Event, y = differential, fill = Team)) +
+  geom_boxplot() +
+  labs(
+    title = "Goal Differential by Team and Event Type",
+    x = "Event Type",
+    y = "Goal Differential"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set1")
+```
+
+When looking at the box plot we can see that for Friendlies, the USWNT has higher median and larger positive differentials, meaning they win by larger margins. The USMNT shows a lower median and more spread.
+
+For the Olympics, both teams show a drop in performance. The USMNT tends to have negative differentials meaning they lose more often or by bigger margins. 
+
+For other tournaments and the world cup the USWNT still performs better than the men. 
+
+In general I can visually see that the USWNT consistently performs better across all event types with higher median goal differentials. 
 
 
+Step 9: Final Story Pitch
 
+Headline: U.S. Women's Soccer Team Outperforms Men's Team Across Decades, Data Says.
 
+The story: Data analysis has shown that the U.S. Women's National Soccer Team does not only score more goals on average than U.S. Men's National Soccer Team, but also outperforms them across different types of tournaments. Throughout my exploration and statistical analysis of over 1,000 matches I have determined multiple key findings:
 
+- The USWNT has a higher average goal differential (2.19) compared to the men (.22)
+  - The difference was deemed to be statistically
+    significant with a p value far below .05,        meaning it's highly unlikely this is due to      chance
+- Both teams perform worse in the Olympics compared to other tournament types, but the USWNT still has a higher goal differential across all event types
 
+While the analysis I did showed the USWNT to be the stronger team, problems and limitations did arise:
+- My data source was Wikipedia which was very comprehensive, but could have contained inaccuracies. However, this was the best available resource to get records of every single game each team has played in a timely manner. 
+- My analysis focuses on goal differential as the primary metric of performance, but does not include other potential aspects like opponent strength. In my opinion though, goal differential is the best metric to lose, as in the soccer world most teams are mainly judged by their ability to score goals and win games. 
+- Women's and Men's soccer are have different investment and popularity in different places in the world, which could lead to certain teams' ability to compete and perform. 
 
+My reporting plan for the story would be as follows:
+- I would want to interview soccer analysts, former players and coaches to give context on why the women's team performs better based on these statistics. 
+- Next, I would want to research details relating to the payment and treatment of both teams. I know the women get paid less, but why if they are statistically better? 
+- If I find information (which I think that I would) that the USWNT is treated with less respect/paid less, I would want to reach out to officials from the U.S. Soccer Federation as to why this is. 
+- I think it would also be important to interview an advocate for gender equality in women's sports for their opinion on as to why the women perform better, but are paid less. Potentially for this step I could look into if revenue from TV viewership or merchandise sales could play a factor. 
 
-
+In summary, I want this story to begin by explaining the statistics and data I found in a readable way, using terms such as "statistically significant," but avoiding confusing test names or terms that readers simply wouldn't understand. Integrated into this data explanation, I want to include quotes and opinions from analysts and coaches/players from both teams that give a human perspective into why my key findings arose. Finally, I want to shift into a gender-equality aspect, looking at the historical treatment of both teams and seeing if it aligns with their performance overall. It's simple: if the women actually perform better, they should be paid more. I want to see if this is the case, or if people have thoughts in support of or against that idea and why. The story should start with the numbers, but go on to investigate the societal problem of gender inequality in sports. 
 
