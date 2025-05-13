@@ -209,7 +209,7 @@ The story: Data analysis has shown that the U.S. Women's National Soccer Team do
 
 - The USWNT has a higher average goal differential (2.19) compared to the men (.22)
   - The difference was deemed to be statistically
-    significant with a p value far below .05,        meaning it's highly unlikely this is due to      chance
+    significant with a p value far below .05, meaning it's highly unlikely this is due to chance
 - Both teams perform worse in the Olympics compared to other tournament types, but the USWNT still has a higher goal differential across all event types
 
 While the analysis I did showed the USWNT to be the stronger team, problems and limitations did arise:
